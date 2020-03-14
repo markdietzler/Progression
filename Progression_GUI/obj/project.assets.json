@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Progression_Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Progression_Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Progression_Library.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Progression_Library/1.0.0": {
+      "type": "project",
+      "path": "../Progression_Library/Progression_Library.csproj",
+      "msbuildProject": "../Progression_Library/Progression_Library.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Progression_Library >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Diesel\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_GUI\\Progression_GUI.csproj",
+      "projectName": "Progression_GUI",
+      "projectPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_GUI\\Progression_GUI.csproj",
+      "packagesPath": "C:\\Users\\Diesel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_GUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Diesel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj": {
+              "projectPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

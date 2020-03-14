@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Progression_GUI/1.0.0": {
+        "dependencies": {
+          "Progression_Library": "1.0.0"
+        },
+        "runtime": {
+          "Progression_GUI.dll": {}
+        }
+      },
+      "Progression_Library/1.0.0": {
+        "runtime": {
+          "Progression_Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Progression_GUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Progression_Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

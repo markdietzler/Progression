@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Gems\Skills\Green\" />
+    <Folder Include="Gems\Skills\Blue\" />
+    <Folder Include="Gems\Skills\Red\" />
+    <Folder Include="Gems\Support\Green\" />
+    <Folder Include="Gems\Support\Blue\" />
+  </ItemGroup>
+
+</Project>
