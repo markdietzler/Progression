@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cv45lwg32xcQ0rtbJ9hDGZFZVXVAKZi4x2EINpbwNRMysOaKbtBdT3YSemO6rii87OceqUaOCp76ttl/s6G4Cg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_GUI\\Progression_GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Diesel\\.nuget\\packages\\materialdesigncolors\\1.2.2\\materialdesigncolors.1.2.2.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\materialdesignthemes\\3.0.1\\materialdesignthemes.3.0.1.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite\\1.0.112\\system.data.sqlite.1.0.112.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512"
+  ],
+  "logs": []
+}

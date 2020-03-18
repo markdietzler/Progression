@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vwaeAY4BdFt+TNQ8HyD9ea9EHWPKkqKMMhvBU+jDfFhHEYELlhepSDgEqxe3H9yBfNbVidki2Rfb1rXgmiFVwg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\Progression_Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite\\1.0.112\\system.data.sqlite.1.0.112.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj": {}
+    "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\Progression_Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj": {
+    "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\Progression_Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj",
+        "projectUniqueName": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\Progression_Library.csproj",
         "projectName": "Progression_Library",
-        "projectPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\Progression_Library.csproj",
+        "projectPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\Progression_Library.csproj",
         "packagesPath": "C:\\Users\\Diesel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression\\Progression_Library\\obj\\",
+        "outputPath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Diesel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.112, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
