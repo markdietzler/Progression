@@ -1,7 +1,7 @@
 ﻿
 namespace Progression_GUI.Models
 {
-    public class Chest
+    public class TwoHand
     {
         string slotOne { get; set; }
 
@@ -11,8 +11,18 @@ namespace Progression_GUI.Models
 
         string slotFour { get; set; }
 
+        string slotFive { get; set; }
+
+        string slotSix { get; set; }
+        
         bool linkOneTwo { get; set; }
+
         bool linkTwoThree { get; set; }
+
         bool linkThreeFour { get; set; }
+
+        bool linkFourFive { get; set; }
+
+        bool linkFiveSix { get; set; }
     }
 }
