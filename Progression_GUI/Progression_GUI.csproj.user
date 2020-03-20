@@ -7,24 +7,30 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddGem.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\ConfigureHelm.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Sub_Views\AddGem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Sub_Views\FourSocketConfig.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Sub_Views\SixSocketConfig.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\AddGem.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\ConfigureHelm.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sub_Views\AddGem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sub_Views\FourSocketConfig.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sub_Views\SixSocketConfig.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Progression_GUI.Views
+namespace Progression_GUI.Views.Sub_Views
 {
     /// <summary>
     /// Interaction logic for AddGem.xaml
