@@ -21,5 +21,21 @@ namespace Progression_Library.Defaults
             }
             
         }
+
+        public static string ProgressionConfigs
+        {
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Progression";
+            }
+        }
+
+        public static string ProgressionData
+        {
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\Progression";
+            }
+        }
     }
 }

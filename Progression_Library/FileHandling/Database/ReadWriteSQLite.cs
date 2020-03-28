@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Progression_Library.Classes
+namespace Progression_Library.FileHandling.Database
 {
-    public class Duelist
+    public class ReadWriteSQLite
     {
     }
 }

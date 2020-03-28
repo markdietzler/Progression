@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Skills\Added_Fire_Damage_Support_inventory_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Skills\Added_Fire_Damage_Support_inventory_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="1.2.2" />
     <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />

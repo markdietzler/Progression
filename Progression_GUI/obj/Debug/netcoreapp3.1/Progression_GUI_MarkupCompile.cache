@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\App.xaml
-2-2016162251
+4-2130954954
 
-11-2125114143
+16-499164083
 197489465493
-Views\AddGem.xaml;Views\MainWindow.xaml;
+Views\MainWindow.xaml;Views\Sub_Views\AddGem.xaml;Views\Sub_Views\FourSocketConfig.xaml;Views\Sub_Views\SixSocketConfig.xaml;
 
 False
 

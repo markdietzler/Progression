@@ -23,7 +23,6 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression\Progression
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.dll
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.pdb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.csprojAssemblyReference.cache
-C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\AddGem.g.cs
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\MainWindow.g.cs
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI_MarkupCompile.cache
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI_MarkupCompile.lref
@@ -47,7 +46,6 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\bin\Deb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\bin\Debug\netcoreapp3.1\Progression_Library.dll
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\bin\Debug\netcoreapp3.1\Progression_Library.pdb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\AddGem.baml
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\MainWindow.baml
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.g.resources
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.csproj.CoreCompileInputs.cache
@@ -55,3 +53,10 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Deb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.AssemblyInfo.cs
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.csproj.CopyComplete
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Progression_GUI.genruntimeconfig.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\AddGem.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\FourSocketConfig.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\SixSocketConfig.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\AddGem.baml
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\FourSocketConfig.baml
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\SixSocketConfig.baml
