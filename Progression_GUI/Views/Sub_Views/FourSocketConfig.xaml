@@ -13,7 +13,7 @@
         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignPaper}"
         
-        Title="FourSocketConfig" Height="450" Width="800">
+        Title="Four Sockets" Height="450" Width="800">
     <Grid>
         <!-- main grid layout definitions -->
         <Grid.ColumnDefinitions>
