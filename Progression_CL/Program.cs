@@ -1,74 +1,39 @@
-﻿using Progression_Library.Defaults;
-using System;
+﻿using System;
 using System.IO;
-using System.Threading;
 
 namespace Progression_CL
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static async System.Threading.Tasks.Task Main(string[] args)
         {
-            //Console.WriteLine(AppDefaults.PoE_LogFile);
-            //File.WriteAllLines("test.txt", new string[] { "XX","YY"});
-
-            new Thread(() => ReadFromFile(AppDefaults.PoE_LogFile, AppDefaults.POE_Logs)).Start();
-
-            //WriteToFile();
-        }
-
-        private static void ReadFromFile(string fileToWatch, string folderToWatch)
-        {
-            long _offset = 0;
-            FileSystemWatcher _fsw = new FileSystemWatcher
+            using (var fs = new FileStream(@"D:\Games\Path of Exile\logs\Client.txt", FileMode.Open,FileAccess.Read, FileShare.ReadWrite))
+            using (var sr = new StreamReader(fs))
             {
-                Path = folderToWatch,
-                Filter = fileToWatch
-            };
-
-            FileStream file = File.Open(
-                fileToWatch,
-                FileMode.Open,
-                FileAccess.Read,
-                FileShare.Write
-                );
-
-            StreamReader reader = new StreamReader(file);
-            while(true)
-            {
-                _fsw.WaitForChanged(WatcherChangeTypes.Changed);
-                file.Seek(_offset, SeekOrigin.Begin);
-                if(!reader.EndOfStream)
+                if(sr.BaseStream.Length > 1024)
                 {
-                    do
-                    {
-                        Console.WriteLine(reader.ReadLine());
-                    } while (!reader.EndOfStream);
-
-                    _offset = file.Position;
+                    sr.BaseStream.Seek(-512, SeekOrigin.End);
                 }
-            }
-        } //end of method
 
-        private static void WriteToFile()
-        {
-            for(int i = 100; i < 100; i++)
-            {
-                FileStream writeFile = File.Open(
-                    "test.txt",
-                    FileMode.Append,
-                    FileAccess.Write,
-                    FileShare.Read
-                    );
-                using(FileStream file = writeFile)
+                while (true)
                 {
-                    using(StreamWriter sw = new StreamWriter(file))
+                    string line = await sr.ReadLineAsync();
+
+                    if(line != null)
                     {
-                        sw.WriteLine(i);
-                        Thread.Sleep(100);
+                        if(line.Contains("You have entered"))
+                        {
+                            Console.WriteLine("Player changed area");
+                        }
+                        if (line.Contains("is now level")){
+                            Console.WriteLine("Player levelled up");
+                        }
+                        
                     }
+
+                    //await sr.ReadLineAsync();
                 }
             }
-        } //end of method
+        }
     }
 }
