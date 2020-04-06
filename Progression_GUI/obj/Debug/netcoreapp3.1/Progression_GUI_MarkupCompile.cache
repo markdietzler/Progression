@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\
-Progression_GUI
+Progression_GUI_hluwzyj4_wpftmp
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\App.xaml
-4-2130954954
+52132929787
 
-16-499164083
-197489465493
-Views\MainWindow.xaml;Views\Sub_Views\AddGem.xaml;Views\Sub_Views\FourSocketConfig.xaml;Views\Sub_Views\SixSocketConfig.xaml;
+251737116770
+197844198892
+Views\MainWindow.xaml;Views\RunWindow.xaml;Views\Sub_Views\AddGem.xaml;Views\Sub_Views\FourSocketConfig.xaml;Views\Sub_Views\SixSocketConfig.xaml;
 
-False
+True
 

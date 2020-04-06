@@ -44,11 +44,11 @@
           "dependencies": {
             "MaterialDesignColors": {
               "target": "Package",
-              "version": "[1.2.2, )"
+              "version": "[1.2.3, )"
             },
             "MaterialDesignThemes": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[3.1.0, )"
             },
             "MvvmLightLibsStd10": {
               "target": "Package",
