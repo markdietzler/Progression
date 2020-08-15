@@ -1,5 +1,5 @@
 ﻿Progression_GUI
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\App.xaml
 52132929787
 
-19-504358654
+20-971120309
 197844198892
 Views\MainWindow.xaml;Views\RunWindow.xaml;Views\Sub_Views\AddGem.xaml;Views\Sub_Views\FourSocketConfig.xaml;Views\Sub_Views\SixSocketConfig.xaml;
 
