@@ -52,7 +52,7 @@
                     </Border>
                 </Viewbox>
                 
-                <!-- link symbol -->
+                <!-- link symbol from top left to top right -->
                 <TextBlock Grid.Column="2" Grid.Row="1" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 
                 <!-- upper RH corner gem -->
@@ -62,7 +62,7 @@
                     </Border>
                 </Viewbox>
                 
-                <!-- link symbok from top to bottom row -->
+                <!-- link symbol from top right to bottom right -->
                 <TextBlock Grid.Column="3" Grid.Row="2" Text="|" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 
                 <!-- lower LH corner gem -->
@@ -72,7 +72,7 @@
                     </Border>
                 </Viewbox>
                 
-                <!-- link symbol -->
+                <!-- link symbol bottom right to bottom left -->
                 <TextBlock Grid.Column="2" Grid.Row="3" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 
                 <!-- lower RH corner gem -->

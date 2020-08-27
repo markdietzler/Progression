@@ -1,0 +1,103 @@
+﻿<Window x:Class="Progression_GUI.Views.Sub_Views.ThreeSocketConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:Progression_GUI.Views.Sub_Views"
+        xmlns:viewmodels="clr-namespace:Progression_GUI.ViewModels"
+        xmlns:models="clr-namespace:Progression_GUI.Models"        
+        
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignPaper}"
+        
+        Title="Three Sockets" Height="450" Width="800">
+    <Grid>
+        <!-- main grid layout definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Text="Four Socket" HorizontalAlignment="Center" FontSize="28" FontWeight="Medium" Margin="5"/>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="82"/>
+                    <ColumnDefinition Width="35"/>
+                    <ColumnDefinition Width="82"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="82"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="82"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <!-- upper LH corner gem -->
+                <Viewbox Grid.Column="1" Grid.Row="1" Width="78" Height="78">
+                    <Border BorderThickness="3" BorderBrush="Red">
+                        <Image Source="/Assets/Skills/Added_Fire_Damage_Support_inventory_icon.png" />
+                    </Border>
+                </Viewbox>
+
+                <!-- link symbol from top left to top right -->
+                <TextBlock Grid.Column="2" Grid.Row="1" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <!-- upper RH corner gem -->
+                <Viewbox Grid.Column="3" Grid.Row="1" Width="78" Height="78">
+                    <Border BorderThickness="3" BorderBrush="Aquamarine">
+                        <Image Source="/Assets/Skills/Added_Fire_Damage_Support_inventory_icon.png" />
+                    </Border>
+                </Viewbox>
+
+                <!-- link symbol from top right to bottom right -->
+                <TextBlock Grid.Column="3" Grid.Row="2" Text="|" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <!-- lower LH corner gem -->
+                <Viewbox Grid.Column="1" Grid.Row="3" Width="78" Height="78">
+                    <Border BorderThickness="3" BorderBrush="Blue">
+                        <Image Source="/Assets/Skills/Added_Fire_Damage_Support_inventory_icon.png" />
+                    </Border>
+                </Viewbox>
+
+                <!-- link symbol bottom right to bottom left -->
+                <TextBlock Grid.Column="2" Grid.Row="3" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <!-- lower RH corner gem -->
+                <Viewbox Grid.Column="3" Grid.Row="3" Width="78" Height="78">
+                    <Border BorderThickness="3" BorderBrush="DarkSlateBlue">
+                        <Image Source="/Assets/Skills/Added_Fire_Damage_Support_inventory_icon.png" />
+                    </Border>
+                </Viewbox>
+
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="2">
+            <TextBlock Text="Gem Group" FontSize="24" FontWeight="Medium" HorizontalAlignment="Center" Margin="5"/>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="WWWW"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="XXXX"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="YYYY"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="ZZZZ"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

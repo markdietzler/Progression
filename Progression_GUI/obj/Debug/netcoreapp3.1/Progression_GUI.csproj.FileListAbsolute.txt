@@ -61,3 +61,6 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Deb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\FourSocketConfig.baml
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\SixSocketConfig.baml
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\RunWindow.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\ThreeSocketConfig.g.cs
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\RunWindow.baml
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_GUI\obj\Debug\netcoreapp3.1\Views\Sub_Views\ThreeSocketConfig.baml
