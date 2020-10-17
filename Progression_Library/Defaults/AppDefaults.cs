@@ -30,6 +30,14 @@ namespace Progression_Library.Defaults
             }
         }
 
+        public static string PathOfBuilding
+        {
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Progression\PoE_builds";
+            }
+        }
+
         public static string ProgressionData
         {
             get

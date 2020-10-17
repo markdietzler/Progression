@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Gems\Skills\Green\" />
-    <Folder Include="Gems\Skills\Blue\" />
-    <Folder Include="Gems\Skills\Red\" />
-    <Folder Include="Gems\Support\Green\" />
-    <Folder Include="Gems\Support\Blue\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.112" />
   </ItemGroup>
 

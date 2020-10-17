@@ -1,7 +1,7 @@
 ﻿
 namespace Progression_Library.Gems.Support.Red
 {
-    public class CastWhenDamageTaken
+    public class RedSupportGem
     {
         public int Req_Level { get; }
 
@@ -13,7 +13,7 @@ namespace Progression_Library.Gems.Support.Red
 
         public string? Vendor { get; }
 
-        public CastWhenDamageTaken()
+        public RedSupportGem()
         {
             Req_Level = 38;
             Act = 4;
