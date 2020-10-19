@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Progression_Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class TestSlots
     {
         [TestMethod]
         public void TestMethod1()
