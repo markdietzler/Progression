@@ -37,16 +37,28 @@ namespace Progression_CL
                     //await sr.ReadLineAsync();
                 }
             }*/
+
+            // 0    1     2      3     4  5  6     7     8
+            //helm chest gloves boots mh oh ring1 ring2 2h? 
+
+            bool[] test = new bool[9];
+
+            test[0] = true;
+            test[2] = true;
+            test[3] = true;
+            test[6] = true;
+            test[8] = true;
                         
-            List<GearSlot> skills;
-            OneSlot test = new OneSlot();
+            GearSlot skills = new GearSlot(test);
+
+            //OneSlot test = new OneSlot();
             //ThreeSlot test = new ThreeSlot();
             //FourSlot test = new FourSlot();
             //SixSlot test = new SixSlot();
 
-            Console.WriteLine(test);
+            //Console.WriteLine(test);
 
-            test.SetSkill("Ichi");
+            //test.SetSkill("Ichi");
             //test.SetSkill(0, "Ichi");
             //test.SetSkill(1, "Ni");
             //test.SetSkill(2, "San");
@@ -55,7 +67,7 @@ namespace Progression_CL
             //test.SetSkill(5, "Roku");
                
 
-            Console.WriteLine(test);
+            Console.WriteLine("End of test\n");
         }
     }
 }
