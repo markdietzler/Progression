@@ -2,34 +2,44 @@
 
 namespace Progression_Library.Slots
 {
-    class OneSlot
+    public class OneSlot
     {
-        string? skill = "___ 1 ___";
+        string label;
 
+        string skill;
 
-        public OneSlot(string newSkill)
+        public OneSlot()
+            : this("Default 1 Socket Item", "___ 1 ___")
         {
-            if (checkInpout(newSkill))
-            {
-                skill = newSkill;
 
+        }
+
+
+        public OneSlot(string newLabel, string newSkill)
+        {
+            if (CheckInput(newLabel) || CheckInput(newSkill))
+            {
+
+                throw new ArgumentException("The skill for this ring was empty or null.");
             }
             else
             {
-                throw new ArgumentException("The skill for this ring was empty or null.");
+                
+                label = newLabel;
+                skill = newSkill;
             }
 
         }
 
         public void SetSkill(string newSkill)
         {
-            if (checkInpout(newSkill))
+            if (CheckInput(newSkill))
             {
-                skill = newSkill;
+                throw new ArgumentException("The new skill for this ring was empty or null.");
             }
             else
             {
-                throw new ArgumentException("The new skill for this ring was empty or null.");
+                skill = newSkill;
             }
         }
 
@@ -38,7 +48,28 @@ namespace Progression_Library.Slots
             return skill;
         }
 
-        private bool checkInpout(string checkME)
+        public void SetLabel(string newLabel)
+        {
+            if (CheckInput(newLabel))
+            {
+                throw new ArgumentException("New gear label " + newLabel + " cannot be empty or null.");
+            } else
+            {
+                label = newLabel;
+            }
+        }
+
+        public string GetLabel()
+        {
+            return label;
+        }
+
+        public override string ToString()
+        {
+            return "1: " + skill;
+        }
+
+        private bool CheckInput(string checkME)
         {
             return string.IsNullOrEmpty(checkME);
         }

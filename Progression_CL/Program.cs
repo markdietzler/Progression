@@ -39,9 +39,23 @@ namespace Progression_CL
             }*/
                         
             List<GearSlot> skills;
+            OneSlot test = new OneSlot();
+            //ThreeSlot test = new ThreeSlot();
+            //FourSlot test = new FourSlot();
+            //SixSlot test = new SixSlot();
 
-            Console.WriteLine("Hello World");
+            Console.WriteLine(test);
 
+            test.SetSkill("Ichi");
+            //test.SetSkill(0, "Ichi");
+            //test.SetSkill(1, "Ni");
+            //test.SetSkill(2, "San");
+            //test.SetSkill(3, "Shi");
+            //test.SetSkill(4, "Ro");
+            //test.SetSkill(5, "Roku");
+               
+
+            Console.WriteLine(test);
         }
     }
 }

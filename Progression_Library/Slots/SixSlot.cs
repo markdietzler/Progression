@@ -3,26 +3,33 @@ using System.Net.Sockets;
 
 namespace Progression_Library.Slots
 {
-    class SixSlot
+    public class SixSlot
     {
-        private string label = "Default Chest";
+        private string label;
         
         private string[] skills = new string[6];
 
         public SixSlot()
+            : this ("Default Six Socket Item",
+                  "___ 1 ___",
+                  "___ 2 ___",
+                  "___ 3 ___",
+                  "___ 4 ___",
+                  "___ 5 ___",
+                  "___ 6 ___")
         {
-            skills[0] = "___ 1 ___";
-            skills[1] = "___ 2 ___";
-            skills[2] = "___ 3 ___";
-            skills[3] = "___ 4 ___";
-            skills[4] = "___ 5 ___";
-            skills[5] = "___ 6 ___";
+            
         }
 
         public SixSlot(string equipmentType, string topLeft, string topRight, string middleRight, string middleLeft, string lowerLeft, string lowerRight)
         {
             if(CheckInput(topLeft) || CheckInput(topRight) || CheckInput(middleRight) || CheckInput(middleLeft) || CheckInput(lowerLeft) || CheckInput(lowerRight) )
             {
+                throw new ArgumentException("One of the given chest skills was empty or null");
+
+            } else
+            {
+                
                 label = equipmentType;
                 skills[0] = topLeft;
                 skills[1] = topRight;
@@ -30,12 +37,27 @@ namespace Progression_Library.Slots
                 skills[3] = middleLeft;
                 skills[4] = lowerLeft;
                 skills[5] = lowerRight;
+            }            
+        }
 
-            } else
+        public SixSlot(string topLeft, string topRight, string middleRight, string middleLeft, string lowerLeft, string lowerRight)
+        {
+            if (CheckInput(topLeft) || CheckInput(topRight) || CheckInput(middleRight) || CheckInput(middleLeft) || CheckInput(lowerLeft) || CheckInput(lowerRight))
+            {
+
+                label = "Default 6 Socket Item";
+                skills[0] = topLeft;
+                skills[1] = topRight;
+                skills[2] = middleRight;
+                skills[3] = middleLeft;
+                skills[4] = lowerLeft;
+                skills[5] = lowerRight;
+
+            }
+            else
             {
                 throw new ArgumentException("One of the given chest skills was empty or null");
             }
-            
         }
 
         public void SetSkill(int slot, string newSkill)
@@ -44,10 +66,11 @@ namespace Progression_Library.Slots
             {
                 if(CheckInput(newSkill))
                 {
-                    skills[slot] = newSkill;
+                    throw new ArgumentException("The new " + label + " skill for slot " + slot + " can't be enpty or null.");
                 } else
                 {
-                    throw new ArgumentException("The new " + label + " skill for slot " + slot + " can't be enpty or null.");
+                    
+                    skills[slot] = newSkill;
                 }                
 
             } else
@@ -68,21 +91,31 @@ namespace Progression_Library.Slots
             }
             
         }
-
+                
         public void SetType(string newType)
         {
             if(CheckInput(newType))
-            {
-                label = newType;
+            {                
+                throw new ArgumentException("Equipment type can't be empty or null.");
             } else
             {
-                throw new ArgumentException("Equipment type can't be empty or null.");
+                label = newType;
             }
         }
 
         public string GetGearType()
         {
             return label;
+        }
+
+        public int GetLength()
+        {
+            return skills.Length;
+        }
+
+        public override string ToString()
+        {
+            return "1: " + skills[0] + " 2: " + skills[1] + " 3: " + skills[2] + " 4: " + skills[3] + " 5: " + skills[4] + " 6: " + skills[5];
         }
 
         private bool CheckInput(string checkME)
@@ -92,7 +125,7 @@ namespace Progression_Library.Slots
 
         private bool CheckSlot(int slot)
         {
-            if(slot < 0 || slot > skills.Length)
+            if(slot < 0 || slot > skills.Length - 1)
             {
                 return false;
 
