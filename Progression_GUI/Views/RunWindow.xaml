@@ -31,5 +31,44 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        
+        <!-- left hand column -->
+        
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            
+            
+        </StackPanel>
+
+        <!-- right hand column -->
+        
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <WrapPanel Orientation="Horizontal" Name="helmet">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="chest">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="main_hand" Visibility="{Binding MainHand}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="off_hand" Visibility="{Binding OffHand}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="two_hand" Visibility="{Binding TwoHand}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="ring1" Visibility="{Binding RingOne}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="ring2" Visibility="{Binding RingTwo}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="gloves" Visibility="{Binding Gloves}">
+                
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Name="boots">
+                
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>

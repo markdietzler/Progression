@@ -41,15 +41,15 @@ namespace Progression_CL
             // 0    1     2      3     4  5  6     7     8
             //helm chest gloves boots mh oh ring1 ring2 2h? 
 
-            bool[] test = new bool[9];
+            //bool[] test = new bool[9];
 
-            test[0] = true;
-            test[2] = true;
-            test[3] = true;
-            test[6] = true;
-            test[8] = true;
+            //test[0] = true;
+            //test[2] = true;
+            //test[3] = true;
+            //test[6] = true;
+            //test[8] = true;
                         
-            GearSlot skills = new GearSlot(test);
+            //GearSlot skills = new GearSlot(test);
 
             //OneSlot test = new OneSlot();
             //ThreeSlot test = new ThreeSlot();
