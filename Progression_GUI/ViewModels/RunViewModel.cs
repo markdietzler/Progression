@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Progression_Library.Classes;
 using System.Windows;
 
 namespace Progression_GUI.ViewModels
@@ -8,6 +9,7 @@ namespace Progression_GUI.ViewModels
     {
         #region variable declarations
 
+        private ProgressionBuild build;
 
         #endregion
 
