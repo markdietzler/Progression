@@ -14,6 +14,7 @@ namespace Progression_GUI.ViewModels
         #endregion
 
         #region boolean declarations
+
         private bool? _ThreadControl = false;
 
         public bool? ThreadControl
@@ -77,12 +78,20 @@ namespace Progression_GUI.ViewModels
 
         public RunViewModel()
         {
-            //TODO get 
+            //TODO add required classes to the view model constructor
+
+            //TODO load last used profile?
         }
 
         private void LogFileWatcher()
         {
             //TODO figure out if file watcher goes here or in the xaml code behind (probably in the code behind)
+            build = new ProgressionBuild();
+        }
+
+        private void LoadProfile()
+        {
+            //TODO load profile into build class
         }
     }
 }

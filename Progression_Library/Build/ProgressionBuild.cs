@@ -38,6 +38,8 @@ namespace Progression_Library.Classes
 
         //standard constructor for the two known gear types and the selector
 
+        #region constructors
+
         public ProgressionBuild(int givenType, FourSlot helmet, FourSlot givenGloves)
         {
             type = givenType;
@@ -45,7 +47,15 @@ namespace Progression_Library.Classes
             gloves = givenGloves;
         }
 
-        //TODO constructors for various gear configurations
+        //TODO write constructors for various gear configurations
+
+        //default constructor
+        public ProgressionBuild()
+        {
+            //TODO defile default constructor
+        }
+
+        #endregion
 
     }
 }
