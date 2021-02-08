@@ -50,7 +50,7 @@ namespace Progression_GUI {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.1.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -62,7 +62,7 @@ namespace Progression_GUI {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Progression_GUI;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Progression_GUI;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -76,7 +76,7 @@ namespace Progression_GUI {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.1.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
         public static void Main() {
             Progression_GUI.App app = new Progression_GUI.App();
             app.InitializeComponent();

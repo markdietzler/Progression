@@ -36,15 +36,15 @@ namespace Progression_Library.Classes
 
         #endregion
 
+        #region constructor
+
         //standard constructor for the two known gear types and the selector
 
-        #region constructors
-
-        public ProgressionBuild(int givenType, FourSlot helmet, FourSlot givenGloves)
+        public ProgressionBuild(int givenType, string helmet, string givenGloves)
         {
             type = givenType;
-            helm = helmet;
-            gloves = givenGloves;
+            helm = GearFactory.MakeFourSlot(helmet);
+            gloves = GearFactory.MakeFourSlot(givenGloves);
         }
 
         //TODO write constructors for various gear configurations
@@ -53,6 +53,21 @@ namespace Progression_Library.Classes
         public ProgressionBuild()
         {
             //TODO defile default constructor
+        }
+
+        #endregion
+
+        #region private "constructors"
+
+        private void CaseOne(string helmet, string givenGloves, string givenTwoHand)
+        {
+            helm = GearFactory.MakeFourSlot(helmet);
+            gloves = GearFactory.MakeFourSlot(givenGloves);
+            boots = GearFactory.MakeFourSlot(helmet);
+            mainHand = null;
+            offHand = null;
+            twoHand = GearFactory.MakeSixSlot(givenTwoHand);
+
         }
 
         #endregion
