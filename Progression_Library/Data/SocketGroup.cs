@@ -4,8 +4,8 @@ namespace Progression_Library.Data
 {
     public class SocketGroup
     {
-        List<SkillGem> listOfGems;
-        SkillGem active;
+        List<Gem> listOfGems;
+        Gem active;
         //settings
         int fromGroupLevel;
         int untilGroupLevel;
@@ -51,14 +51,14 @@ namespace Progression_Library.Data
         public SocketGroup Dupe(HashSet<int> s_id, HashSet<int> g_id)
         {
             SocketGroup duped = new SocketGroup();
-            SkillGem old_active = this.active;
+            Gem old_active = this.active;
             duped.id = Sign(s_id);
             duped.fromGroupLevel = this.fromGroupLevel;
             duped.untilGroupLevel = this.untilGroupLevel;
             duped.AddNote(this.note);
-            foreach (SkillGem g in listOfGems)
+            foreach (Gem g in listOfGems)
             {
-                SkillGem duped_gem = g.DupeGem();
+                Gem duped_gem = g.DupeGem();
                 duped_gem.level_added = g.level_added;
                 duped_gem.id = Sign(g_id);
                 duped.GetGems().Add(duped_gem);
@@ -73,7 +73,7 @@ namespace Progression_Library.Data
 
         public SocketGroup()
         {
-            listOfGems = new List<SkillGem>();
+            listOfGems = new List<Gem>();
             active = null;
             //gems.add(GemHolder.getInstance().tossDummie());
             //active.add(GemHolder.getInstance().tossDummie());
@@ -93,11 +93,11 @@ namespace Progression_Library.Data
 
         int switche;
 
-        public SkillGem PutGem(SkillGem gem, int id)
+        public Gem PutGem(Gem gem, int id)
         {
             bool switcher = false;
             switche = -1;
-            SkillGem g = null;
+            Gem g = null;
             if (linkerToListIndex.ContainsKey(id))
             {
                 
@@ -110,7 +110,7 @@ namespace Progression_Library.Data
             return g;
         }
         //gets called on load from json
-        public void LinkGem(SkillGem gem, int id)
+        public void LinkGem(Gem gem, int id)
         {
             linkerToListIndex.Add(id, listOfGems.IndexOf(gem));
         }
@@ -121,22 +121,22 @@ namespace Progression_Library.Data
             return switche;
         }
 
-        public void RemoveGem(SkillGem gem, int id)
+        public void RemoveGem(Gem gem, int id)
         {
 
         }
 
-        public SkillGem GetActiveGem()
+        public Gem GetActiveGem()
         {
             return active;
         }
 
-        public void SetActiveGem(SkillGem g)
+        public void SetActiveGem(Gem g)
         {
             active = g;
         }
 
-        public List<SkillGem> GetGems()
+        public List<Gem> GetGems()
         {
             return listOfGems;
         }

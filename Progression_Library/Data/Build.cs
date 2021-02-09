@@ -44,40 +44,40 @@ namespace Progression_Library.Data
             return M_CharacterInfo.characterName;
         }
 
-        public void setCharacterName(string newCharacterName)
+        public void SetCharacterName(string newCharacterName)
         {
             M_CharacterInfo.characterName = newCharacterName;
         }
 
-        public int getCharacterLevel()
+        public int GetCharacterLevel()
         {
             return M_CharacterInfo.level;
         }
 
-        public void setCharacterLevel(int newLevel)
+        public void SetCharacterLevel(int newLevel)
         {
             M_CharacterInfo.level = newLevel;
         }
 
-        public string getClassName()
+        public string GetClassName()
         {
             return M_CharacterInfo.className;
         }
 
-        public string getAsc()
+        public string GetAsc()
         {
             return M_CharacterInfo.ascendancyName;
         }
 
-        public List<SocketGroup> getSocketGroup()
+        public List<SocketGroup> GetSocketGroup()
         {
             return gems;
         }
 
-        public bool validate()
+        public bool Validate()
         {
             //System.out.println(">>>>Validating build :" + this.buildName + "... <<<<");
-            foreach (SocketGroup sg in getSocketGroup())
+            foreach (SocketGroup sg in GetSocketGroup())
             {
                 if (sg.GetActiveGem() == null)
                 {
@@ -106,9 +106,9 @@ namespace Progression_Library.Data
                     }
 
                     //inner loop
-                    List<SkillGem> sorted = new List<SkillGem>(sg.GetGems());
+                    List<Gem> sorted = new List<Gem>(sg.GetGems());
                     //sorted.sort(Comparator.comparing(Gem::getLevelAdded));
-                    foreach (SkillGem g in sorted)
+                    foreach (Gem g in sorted)
                     {
                         if (g.GetGemName().Equals("<empty group>"))
                         {
@@ -136,7 +136,7 @@ namespace Progression_Library.Data
                     }
                 }
             }
-            if (getSocketGroup().Count == 0)
+            if (GetSocketGroup().Count == 0)
             {
                 //System.out.println(">>>>This build has no socket groups created.<<<<");
                 return false;
@@ -145,19 +145,19 @@ namespace Progression_Library.Data
             return true;
         }
 
-        public String validate_failed_string()
+        public string validate_failed_string()
         {
-            String error = ">>>>Validating build :" + this.buildName + "... <<<<\n";
+            string error = ">>>>Validating build :" + this.buildName + "... <<<<\n";
             //System.out.println(error);
-            if (getSocketGroup().isEmpty())
+            if (GetSocketGroup().Count == 0)
             {
                 // System.out.println(">>>>This build has no socket groups created.<<<<");
                 error += ">>>>This build has no socket groups created.<<<<";
                 return error;
             }
-            for (SocketGroup sg : getSocketGroup())
+            foreach (SocketGroup sg in GetSocketGroup())
             {
-                if (sg.getActiveGem() == null)
+                if (sg.GetActiveGem() == null)
                 {
                     //   System.out.println(">>>>A socket group doesn't have a valid main gem.<<<<");
                     error += ">>>>A socket group doesn't have a valid main gem.<<<<";
@@ -166,66 +166,66 @@ namespace Progression_Library.Data
                 else
                 {
                     // System.out.println("SocketGroup # "+sg.getActiveGem().getGemName());
-                    error += "SocketGroup # " + sg.getActiveGem().getGemName() + "\n";
+                    error += "SocketGroup # " + sg.GetActiveGem().GetGemName() + "\n";
                     // System.out.println("- Use at level: "+sg.fromGroupLevel);
-                    error += "- Use at level: " + sg.fromGroupLevel + "\n";
-                    if (sg.replaceGroup())
+                    error += "- Use at level: " + sg.GetFromGroupLevel() + "\n";
+                    if (sg.ReplaceGroup())
                     {
-                        if (sg.getGroupReplaced().getActiveGem() == null)
+                        if (sg.GetGroupReplaced().GetActiveGem() == null)
                         {
                             //  System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+" replaces with a socket group that doesn't have a valid main gem.");
-                            error += ">>>>Socket group -" + sg.getActiveGem().getGemName() + " replaces with a socket group that doesn't have a valid main gem.\n";
+                            error += ">>>>Socket group -" + sg.GetActiveGem().GetGemName() + " replaces with a socket group that doesn't have a valid main gem.\n";
                             return error;
                         }
-                        if (sg.getGroupReplaced().getFromGroupLevel() != sg.getUntilGroupLevel())
+                        if (sg.GetGroupReplaced().GetFromGroupLevel() != sg.GetUntilGroupLevel())
                         {
                             // System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+"- replaces with -"
                             //      +sg.getGroupReplaced().getActiveGem().getGemName()+"- and group levels don't match.");
-                            error += ">>>>Socket group -" + sg.getActiveGem().getGemName() + "- replaces with -"
-                                    + sg.getGroupReplaced().getActiveGem().getGemName() + "- and group levels don't match.\n";
+                            error += ">>>>Socket group -" + sg.GetActiveGem().GetGemName() + "- replaces with -"
+                                    + sg.GetGroupReplaced().GetActiveGem().GetGemName() + "- and group levels don't match.\n";
                             return error;
                         }
                         // System.out.println("- Replace at level: "+sg.untilGroupLevel);
-                        error += "- Replace at level: " + sg.untilGroupLevel + "\n";
+                        error += "- Replace at level: " + sg.GetUntilGroupLevel() + "\n";
                         // System.out.println("- Replace with : -"+sg.getGroupReplaced().getActiveGem().getGemName()+"- .");
-                        error += "- Replace with : -" + sg.getGroupReplaced().getActiveGem().getGemName() + "- .\n";
+                        error += "- Replace with : -" + sg.GetGroupReplaced().GetActiveGem().GetGemName() + "- .\n";
                     }
 
                     //inner loop
-                    ArrayList<Gem> sorted = new ArrayList<>(sg.getGems());
-                    sorted.sort(Comparator.comparing(Gem::getLevelAdded));
-                    for (Gem g : sorted)
+                    List<Gem> sorted = new List<Gem>(sg.GetGems());
+                    //sorted.sort(Comparator.comparing(Gem::getLevelAdded));
+                    foreach (Gem g in sorted)
                     {
-                        if (g.getGemName().equals("<empty group>"))
+                        if (g.GetGemName().Equals("<empty group>"))
                         {
                             // System.out.println(">>>>A gem in this socket group is not set.<<<<");
                             error += ">>>>A gem in this socket group is not set.<<<<\n";
                             return error;
                         }
                         //  System.out.println("--Gem # "+g.getGemName());
-                        error += "--Gem # " + g.getGemName() + "\n";
+                        error += "--Gem # " + g.GetGemName() + "\n";
                         // System.out.println("--- Use at level: "+g.getLevelAdded());
-                        error += "--- Use at level: " + g.getLevelAdded() + "\n";
+                        error += "--- Use at level: " + g.GetLevelAdded() + "\n";
                         if (g.replaced)
                         {
                             if (g.replacedWith == null)
                             {
                                 // System.out.println(">>>>Gem -"+g.getGemName()+" replacement has not been set.");
-                                error += ">>>>Gem -" + g.getGemName() + " replacement has not been set.\n";
+                                error += ">>>>Gem -" + g.GetGemName() + " replacement has not been set.\n";
                                 return error;
                             }
-                            if (g.replacedWith.getLevelAdded() <= g.getLevelAdded())
+                            if (g.replacedWith.GetLevelAdded() <= g.GetLevelAdded())
                             {
                                 //  System.out.println(">>>>Gem -"+g.getGemName()+"- replaces with -"
                                 //    +g.replacedWith.getGemName()+"- and change level don't match.");
-                                error += ">>>>Gem -" + g.getGemName() + "- replaces with -"
-                                        + g.replacedWith.getGemName() + "- and change level don't match.\n";
+                                error += ">>>>Gem -" + g.GetGemName() + "- replaces with -"
+                                        + g.replacedWith.GetGemName() + "- and change level don't match.\n";
                                 return error;
                             }
                             // System.out.println("--- Replace at level: "+g.replacedWith.getLevelAdded());
-                            error += "--- Replace at level: " + g.replacedWith.getLevelAdded() + "\n";
+                            error += "--- Replace at level: " + g.replacedWith.GetLevelAdded() + "\n";
                             // System.out.println("--- Replace with : -"+g.replacedWith.getGemName()+"- .");
-                            error += "--- Replace with : -" + g.replacedWith.getGemName() + "- .\n";
+                            error += "--- Replace with : -" + g.replacedWith.GetGemName() + "- .\n";
                         }
                     }
                 }
@@ -235,33 +235,33 @@ namespace Progression_Library.Data
 
         public void patch_missing_sgroups()
         {
-            ArrayList<SocketGroup> deleted = new ArrayList<>();
-            for (SocketGroup sg : getSocketGroup())
+            List<SocketGroup> deleted = new List<SocketGroup>();
+            foreach (SocketGroup sg in GetSocketGroup())
             {
-                if (sg.getActiveGem() == null)
+                if (sg.GetActiveGem() == null)
                 {
-                    System.out.println("patching>>>>A socket group doesn't have a valid main gem.<<<<");
-                    if (sg.getGems() == null || sg.getGems().isEmpty())
+                    //System.out.println("patching>>>>A socket group doesn't have a valid main gem.<<<<");
+                    if (sg.GetGems() == null || sg.GetGems().Count == 0)
                     {
-                        System.out.println("patching>>>>Deleting empty socket group<<<<");
-                        deleted.add(sg);
+                        //System.out.println("patching>>>>Deleting empty socket group<<<<");
+                        deleted.Add(sg);
                     }
                     else
                     {
-                        System.out.println("patching>>>>Trying to set an active gem for the group<<<<");
-                        for (Gem g : sg.getGems())
+                        //System.out.println("patching>>>>Trying to set an active gem for the group<<<<");
+                        foreach (Gem g in sg.GetGems())
                         {
                             if (g.isActive)
                             {
-                                sg.setActiveGem(g);
-                                System.out.println("patching>>>>Managed to set an active gem for the group<<<<");
+                                sg.SetActiveGem(g);
+                                //System.out.println("patching>>>>Managed to set an active gem for the group<<<<");
                             }
                         }
-                        if (sg.getActiveGem() == null)
+                        if (sg.GetActiveGem() == null)
                         {
-                            System.out.println("patching>>>>No actives gems were available.<<<<");
-                            sg.setActiveGem(sg.getGems().get(0));
-                            System.out.println("patching>>>>Set the first gem in the socket group as main gem.<<<<");
+                            //System.out.println("patching>>>>No actives gems were available.<<<<");
+                            sg.SetActiveGem(sg.GetGems()[0]);
+                            //System.out.println("patching>>>>Set the first gem in the socket group as main gem.<<<<");
                         }
                     }
                 }

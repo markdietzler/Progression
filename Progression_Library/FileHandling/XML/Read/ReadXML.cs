@@ -5,8 +5,6 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
 
-using Progression_Library.Slots;
-
 namespace Progression_Library.FileHandling.XML.Read
 {
     public class ReadXML
@@ -21,15 +19,7 @@ namespace Progression_Library.FileHandling.XML.Read
         {
             return false;
         }
-
-        public static GearSlot GetGear(string fileToRead, string fileLocation, bool[] slots)
-        {
-
-            GearSlot tempGear = new GearSlot(slots);
-
-            return tempGear;
-            
-        }
+                
 
         private void GetXMLGear()
         {

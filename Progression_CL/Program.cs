@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using Progression_Library.Slots;
 
 namespace Progression_CL
 {
