@@ -12,20 +12,31 @@ namespace Progression_Library.Data
         public string className = "";
         public string ascendancyName = "";
         public string characterName = "";
-        public int level = -1;
-
-        public bool loadedFromPOEAPI = false;
-        public long experience = -1;
         public string league = "";
+        public int level = -1;        
+        public long experience = -1;
+        public bool loadedFromPOEAPI = false;
 
         public void CopyFrom(CharacterInfo charInfo)
         {
             string before = null;
+
             if(charInfo is CharacterInfo)
             {
-                //TODO do to string
+                before = ToString();
             }
             this.className = charInfo.className;
+            this.ascendancyName = charInfo.ascendancyName;
+            this.characterName = charInfo.characterName;
+            this.level = charInfo.level;
+            this.loadedFromPOEAPI = charInfo.loadedFromPOEAPI;
+            this.experience = charInfo.experience;
+            this.league = charInfo.league;
+            if (before != null)
+            {
+                //m_logger.info("CharacterInfo changed from: " + before);
+                //m_logger.info("To: " + toString());
+            }
         }
 
         public override string ToString()
@@ -79,7 +90,10 @@ namespace Progression_Library.Data
             if (that == null) return false;
             return level == test.level &&
                 loadedFromPOEAPI == test.loadedFromPOEAPI &&
-                experience == test.experience;
+                experience == test.experience
+
+                //TODO add equals comparisons for 4 string variables
+                ;
         }       
 
         public bool Equals(CharacterInfo charInf)

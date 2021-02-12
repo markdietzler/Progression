@@ -23,18 +23,18 @@ namespace Progression_Library.Data
             "Fallen from Grace"
         };
 
-        int level;
-        public string name;
-        public bool hasPassive;
-        public bool hasTrial;
-        List<string> image;
-        string altimage;
-        string note;
-        string quest;
-        bool questRewardsSkills;
-        string actName;
-        public int actID;
-        public bool hasRecipe;
+        private int level;
+        private string name;
+        private bool hasPassive;
+        private bool hasTrial;
+        private List<string> image;
+        private string altimage;
+        private string note;
+        private string quest;
+        private bool questRewardsSkills;
+        private string actName;
+        private int actID;
+        private bool hasRecipe;
 
         public class RecipeInfo
         {
@@ -60,6 +60,15 @@ namespace Progression_Library.Data
             this.actName = actName;
             this.actID = actID;
             rInfo = new RecipeInfo();
+        }
+
+        public void SetZoneLevel(int newLevel)
+        {
+            if(newLevel < 1 || newLevel > 82)
+            {
+                throw new ArgumentException("Zone level outside of in game zone range.");
+            }
+            level = newLevel;
         }
 
         public int GetZoneLevel()
@@ -90,6 +99,32 @@ namespace Progression_Library.Data
         public string AltImage()
         {
             return altimage;
-        }        
+        }
+        
+        public bool DoesZoneHaveRecipie()
+        {
+            return hasRecipe;
+        }
+
+        public void FlipZoneRecipieBit()
+        {
+            if(hasRecipe == false)
+            {
+                hasRecipe = true;
+            } else
+            {
+                hasRecipe = false;
+            }
+        }
+
+        public void SetZoneRecipie(bool value)
+        {
+            hasRecipe = value;
+        }
+
+        public int GetActID()
+        {
+            return actID;
+        }
     }
 }

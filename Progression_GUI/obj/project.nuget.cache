@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "fteq+rF3SdwDAIzKbQKoByDEM/u/UmgcDp2rGHbQ+94IDBJ+mJqFidhsj8ZoYMuf0xIbfugObNEw6zm06D8C2Q==",
+  "dgSpecHash": "U//brpknaqUd3xNYxP0c/8ewVX+uL8kj19u/jyFWnHfLnvAbZGlEbxLqTscL7Dt9iNDA8g/Nmx9wXGg5X/16wQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_GUI\\Progression_GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diesel\\.nuget\\packages\\materialdesigncolors\\1.2.3\\materialdesigncolors.1.2.3.nupkg.sha512",
     "C:\\Users\\Diesel\\.nuget\\packages\\materialdesignthemes\\3.1.0\\materialdesignthemes.3.1.0.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Diesel\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite\\1.0.112\\system.data.sqlite.1.0.112.nupkg.sha512",
-    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512"
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.drawing.common\\5.0.1\\system.drawing.common.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

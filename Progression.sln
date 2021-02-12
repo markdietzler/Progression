@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progression_GUI", "Progress
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progression_CL", "Progression_CL\Progression_CL.csproj", "{7DD5F083-846F-49FE-8277-52137398E367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progression.Tests", "Progression.Tests\Progression.Tests.csproj", "{73BFBA5C-924D-441F-AFF6-18B6ADCA6EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7DD5F083-846F-49FE-8277-52137398E367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DD5F083-846F-49FE-8277-52137398E367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DD5F083-846F-49FE-8277-52137398E367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BFBA5C-924D-441F-AFF6-18B6ADCA6EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BFBA5C-924D-441F-AFF6-18B6ADCA6EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BFBA5C-924D-441F-AFF6-18B6ADCA6EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BFBA5C-924D-441F-AFF6-18B6ADCA6EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

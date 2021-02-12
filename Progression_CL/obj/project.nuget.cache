@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "8Ur3V/dKJ9nEyquYWVTbx0Njubswk+k3P/RfdKxAsxjI6eUWJPgj+nw9fzbzFs48gvn02V5pBWcd0/R4Y1T1nA==",
+  "dgSpecHash": "GxfZcZyhFD1Hi92LrkMcNbQ3hVSucVbbJKjzkRmjxwRR1aJZcpHgtlaJMSz54Y3oJuKZ9F6wC8GppVNpPcbXkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Diesel\\Documents\\c sharp workspaces\\Progression\\Progression_CL\\Progression_CL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Diesel\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite\\1.0.112\\system.data.sqlite.1.0.112.nupkg.sha512",
-    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512"
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512",
+    "C:\\Users\\Diesel\\.nuget\\packages\\system.drawing.common\\5.0.1\\system.drawing.common.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

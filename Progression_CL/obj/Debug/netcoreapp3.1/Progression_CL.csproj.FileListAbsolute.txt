@@ -19,3 +19,8 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\obj\Debu
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\obj\Debug\netcoreapp3.1\Progression_CL.dll
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\obj\Debug\netcoreapp3.1\Progression_CL.pdb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\obj\Debug\netcoreapp3.1\Progression_CL.genruntimeconfig.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression_CL\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

@@ -5,25 +5,35 @@ namespace Progression_Library.Data
 {
     public class Act
     {
-        int actid;
-        string act;
-        public List<Zone> zones;
+        private int actID;
+        private string actName;
+        private List<Zone> zonesInAct;
 
         public Act(int actId, String act)
         {
-            this.actid = actId;
-            this.zones = new List<Zone>();
-            this.act = act;
+            this.actID = actId;
+            this.zonesInAct = new List<Zone>();
+            this.actName = act;
         }
 
         public List<Zone> getZones()
         {
-            return zones;
+            return zonesInAct;
         }
 
-        public void putZone(Zone z)
+        public void PutZone(Zone zoneToPut)
         {
-            zones.Add(z);
+            zonesInAct.Add(zoneToPut);
+        }
+
+        public int GetActID()
+        {
+            return actID;
+        }
+
+        public string GetActName()
+        {
+            return actName;
         }
     }
 }

@@ -49,30 +49,30 @@ namespace Progression_Library.Data
             return acts;
         }
 
-        public void PutZone(Zone z)
+        public void PutZone(Zone zoneToAdd)
         {
             //TODO add validation for type Zone
-            if(z == null)
+            if(zoneToAdd == null)
             {
                 throw new ArgumentNullException("");
             }
 
-            if (z is Zone) {
-                zonesWithRecipies.Add(z);
+            if (zoneToAdd is Zone) {
+                zonesWithRecipies.Add(zoneToAdd);
             } else
             {
                 throw new ArgumentException("New zone is not of type Zone!");
             }
 
-            if (zoneRecipieActMapper.ContainsKey(z.actID))
+            if (zoneRecipieActMapper.ContainsKey(zoneToAdd.GetActID()))
             {
-                List<Zone> zones = zoneRecipieActMapper[z.actID];
-                zones.Add(z);
+                List<Zone> zones = zoneRecipieActMapper[zoneToAdd.GetActID()];
+                zones.Add(zoneToAdd);
             } else
             {
                 List<Zone> zones = new List<Zone>();
-                zoneRecipieActMapper[z.actID] = zones;
-                zones.Add(z);
+                zoneRecipieActMapper[zoneToAdd.GetActID()] = zones;
+                zones.Add(zoneToAdd);
             }
             
         }

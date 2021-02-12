@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Progression_Library.Data
@@ -19,6 +20,7 @@ namespace Progression_Library.Data
         }
 
         //gem fields
+        
         public int id;
         private string? gemName;
         public string? availableAfterThisQuest;
@@ -56,6 +58,8 @@ namespace Progression_Library.Data
         //public transient Image gemIcon;
         //public transient Image smallGemIcon;
         //public transient Label cacheLabel
+        public Bitmap gemIcon;
+        public Bitmap smallGemIcon;
 
         public bool IsBoughtFromQuestReward()
         {
@@ -100,8 +104,8 @@ namespace Progression_Library.Data
             id = -1;
             id_replaced = -1;
             id_replaces = -1;
-            //this.gemIcon = dupe.getIcon();
-            //this.smallGemIcon = dupe.getSmallIcon();
+            this.gemIcon = dupe.GetIcon();
+            this.smallGemIcon = dupe.GetSmallIcon();
             this.gemName = dupe.GetGemName();
             //more
             this.id = dupe.id;
@@ -136,6 +140,16 @@ namespace Progression_Library.Data
             {
                 return required_lvl;
             }
+        }
+
+        public Bitmap GetIcon()
+        {
+            return gemIcon;
+        }
+
+        public Bitmap GetSmallIcon()
+        {
+            return smallGemIcon;
         }
 
         public string? GetGemName()
@@ -186,23 +200,16 @@ namespace Progression_Library.Data
             return cacheLabel;
         }*/
 
-        /*public void resizeImage()
+        public void ResizeImage()
         {
-            BufferedImage before = SwingFXUtils.fromFXImage(gemIcon, null);
-            int w = before.getWidth();
-            int h = before.getHeight();
-            // Create a new image of the proper size
+            //get size of gem image
+            int w = gemIcon.Width;
+            int h = gemIcon.Height;
+            // Create small gem image of the proper size
             int w2 = (int)(w * 0.7);
             int h2 = (int)(h * 0.7);
-            BufferedImage after = new BufferedImage(w2, h2, BufferedImage.TYPE_INT_ARGB);
-            AffineTransform scaleInstance = AffineTransform.getScaleInstance(0.7, 0.7);
-            AffineTransformOp scaleOp
-                = new AffineTransformOp(scaleInstance, AffineTransformOp.TYPE_BILINEAR);
-
-            after = scaleOp.filter(before, after);
-            smallGemIcon = SwingFXUtils.toFXImage(after, null);
-            //ImageIcon imageIcon = new ImageIcon(dimg);
-        }*/
+            smallGemIcon = new Bitmap(gemIcon, new Size(w2,h2));            
+        }
 
     }
 }
