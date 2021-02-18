@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using Progression_Library.Classes;
+using Progression_Library.Data;
 using System.Windows;
 
 namespace Progression_GUI.ViewModels
@@ -9,7 +9,7 @@ namespace Progression_GUI.ViewModels
     {
         #region variable declarations
 
-        private ProgressionBuild build;
+        private Build build;
 
         #endregion
 
@@ -86,7 +86,7 @@ namespace Progression_GUI.ViewModels
         private void LogFileWatcher()
         {
             //TODO figure out if file watcher goes here or in the xaml code behind (probably in the code behind)
-            build = new ProgressionBuild();
+            //build = new Build();
         }
 
         private void LoadProfile()

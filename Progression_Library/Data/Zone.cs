@@ -60,6 +60,7 @@ namespace Progression_Library.Data
             this.actName = actName;
             this.actID = actID;
             rInfo = new RecipeInfo();
+            hasRecipe = false;
         }
 
         public void SetZoneLevel(int newLevel)

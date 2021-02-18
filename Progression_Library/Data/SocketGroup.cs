@@ -83,7 +83,7 @@ namespace Progression_Library.Data
             socketGroupReplace = null;
             replacesGroup = false;
             socketGroupThatReplaces = null;
-            //indexOfReplaceGroup= -1;
+            //indexOfReplaceGroup = -1;
             linkerToListIndex = new Dictionary<int, int>();
             id = -1;
             id_replace = -1;

@@ -5,28 +5,28 @@ namespace Progression_Library.Data
 {
     public class Build
     {
-        public string buildName;
-        List<SocketGroup> gems;
-        public bool hasPob;
-        public string pobLink;
-        public bool isValid;
+        private string buildName;
+        private List<SocketGroup> gems;
+        private bool hasPob;
+        private string pobLink;
+        private bool isValid;
         private readonly CharacterInfo M_CharacterInfo = new CharacterInfo();
 
         public Build(string buildName, string className, string ascendencyName)
         {
             this.buildName = buildName;
-            M_CharacterInfo.className = className;
-            M_CharacterInfo.ascendancyName = ascendencyName;
+            M_CharacterInfo.SetClassName(className);
+            M_CharacterInfo.SetAscendency(ascendencyName);
             gems = new List<SocketGroup>();
-            M_CharacterInfo.level = -1;
-            M_CharacterInfo.characterName = "";
+            M_CharacterInfo.SetLevel(-1);
+            M_CharacterInfo.SetCharName("");
         }
 
         public void SetCharacterInfo(CharacterInfo charInfo)
         {
             // TODO don't overwrite ascendency in the Build
-            M_CharacterInfo.characterName = charInfo.characterName;
-            M_CharacterInfo.level = charInfo.level;
+            M_CharacterInfo.SetCharName(charInfo.GetCharacterName());
+            M_CharacterInfo.SetLevel(charInfo.GetLevel());
         }
 
         public CharacterInfo GetCharacterInfo()
@@ -41,32 +41,32 @@ namespace Progression_Library.Data
 
         public string GetCharacterName()
         {
-            return M_CharacterInfo.characterName;
+            return M_CharacterInfo.GetCharacterName();
         }
 
         public void SetCharacterName(string newCharacterName)
         {
-            M_CharacterInfo.characterName = newCharacterName;
+            M_CharacterInfo.SetCharName(newCharacterName);
         }
 
         public int GetCharacterLevel()
         {
-            return M_CharacterInfo.level;
+            return M_CharacterInfo.GetLevel();
         }
 
         public void SetCharacterLevel(int newLevel)
         {
-            M_CharacterInfo.level = newLevel;
+            M_CharacterInfo.SetLevel(newLevel);
         }
 
         public string GetClassName()
         {
-            return M_CharacterInfo.className;
+            return M_CharacterInfo.GetClassType();
         }
 
         public string GetAsc()
         {
-            return M_CharacterInfo.ascendancyName;
+            return M_CharacterInfo.GetAscendency();
         }
 
         public List<SocketGroup> GetSocketGroup()
