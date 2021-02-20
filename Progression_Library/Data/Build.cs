@@ -117,14 +117,14 @@ namespace Progression_Library.Data
                         }
                         //System.out.println("--Gem # "+g.getGemName());
                         //System.out.println("--- Use at level: "+g.getLevelAdded());
-                        if (g.replaced)
+                        if (g.GetReplaced())
                         {
-                            if (g.replacedWith == null)
+                            if (g.GetReplacedWith() == null)
                             {
                                 //  System.out.println(">>>>Gem -"+g.getGemName()+" replacement has not been set.");
                                 return false;
                             }
-                            if (g.replacedWith.GetLevelAdded() <= g.GetLevelAdded())
+                            if (g.GetReplacedWith().GetLevelAdded() <= g.GetLevelAdded())
                             {
                                 //  System.out.println(">>>>Gem -"+g.getGemName()+"- replaces with -"
                                 //      +g.replacedWith.getGemName()+"- and change level don't match.");
@@ -206,26 +206,26 @@ namespace Progression_Library.Data
                         error += "--Gem # " + g.GetGemName() + "\n";
                         // System.out.println("--- Use at level: "+g.getLevelAdded());
                         error += "--- Use at level: " + g.GetLevelAdded() + "\n";
-                        if (g.replaced)
+                        if (g.GetReplaced())
                         {
-                            if (g.replacedWith == null)
+                            if (g.GetReplacedWith() == null)
                             {
                                 // System.out.println(">>>>Gem -"+g.getGemName()+" replacement has not been set.");
                                 error += ">>>>Gem -" + g.GetGemName() + " replacement has not been set.\n";
                                 return error;
                             }
-                            if (g.replacedWith.GetLevelAdded() <= g.GetLevelAdded())
+                            if (g.GetReplacedWith().GetLevelAdded() <= g.GetLevelAdded())
                             {
                                 //  System.out.println(">>>>Gem -"+g.getGemName()+"- replaces with -"
                                 //    +g.replacedWith.getGemName()+"- and change level don't match.");
                                 error += ">>>>Gem -" + g.GetGemName() + "- replaces with -"
-                                        + g.replacedWith.GetGemName() + "- and change level don't match.\n";
+                                        + g.GetReplacedWith().GetGemName() + "- and change level don't match.\n";
                                 return error;
                             }
                             // System.out.println("--- Replace at level: "+g.replacedWith.getLevelAdded());
-                            error += "--- Replace at level: " + g.replacedWith.GetLevelAdded() + "\n";
+                            error += "--- Replace at level: " + g.GetReplacedWith().GetLevelAdded() + "\n";
                             // System.out.println("--- Replace with : -"+g.replacedWith.getGemName()+"- .");
-                            error += "--- Replace with : -" + g.replacedWith.GetGemName() + "- .\n";
+                            error += "--- Replace with : -" + g.GetReplacedWith().GetGemName() + "- .\n";
                         }
                     }
                 }
@@ -251,7 +251,7 @@ namespace Progression_Library.Data
                         //System.out.println("patching>>>>Trying to set an active gem for the group<<<<");
                         foreach (Gem g in sg.GetGems())
                         {
-                            if (g.isActive)
+                            if (g.GetIsActive())
                             {
                                 sg.SetActiveGem(g);
                                 //System.out.println("patching>>>>Managed to set an active gem for the group<<<<");

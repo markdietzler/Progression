@@ -59,13 +59,13 @@ namespace Progression_Library.Data
             foreach (Gem g in listOfGems)
             {
                 Gem duped_gem = g.DupeGem();
-                duped_gem.level_added = g.level_added;
-                duped_gem.id = Sign(g_id);
+                g.SetLevelAdded(duped_gem.GetLevelAdded());
+                duped_gem.SetGemID(Sign(g_id));
                 duped.GetGems().Add(duped_gem);
                 if (g.Equals(old_active))
                 {
                     duped.active = duped_gem;
-                    duped.active_id = duped_gem.id;
+                    duped.active_id = duped_gem.GetGemID();
                 }
             }
             return duped;

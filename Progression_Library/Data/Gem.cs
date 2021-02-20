@@ -19,59 +19,52 @@ namespace Progression_Library.Data
             public List<string>? classCanBuy;
         }
 
+        #region variables
+
         //gem fields
-        
-        public int id;
+
+        private int id;
         private string? gemName;
-        public string? availableAfterThisQuest;
-        public string? sellingVendor;
-        public int actFirstAvailable;
-        public int required_lvl;
-        public int level_added;
-        public bool? isVaalGem;
-        public List<String>? classCanBuy;
-        public string? townCanBuyIn;
-        public string? gemColor;
-        public string? iconPath;
-        public string? iconDirPath;
-        public bool replaced;
-        public Gem? replacedWith;
-        public bool replaces;
-        public Gem? replacesGem;
+        private string? availableAfterThisQuest;
+        private string? sellingVendor;
+        private int actFirstAvailable;
+        private int required_lvl;
+        private int level_added;
+        private bool isVaalGem;
+        private List<String>? classCanBuy;
+        private string? townCanBuyIn;
+        private string? gemColor;
+        private string? iconPath;
+        private string? iconDirPath;
+        private bool replaced;
+        private Gem? replacedWith;
+        private bool replaces;
+        private Gem? replacesGem;
 
         //IDS FOR JSON CONVERTION
-        public int id_replaced;
-        public int id_replaces;
+        private int id_replaced;
+        private int id_replaces;
 
         //quest reward fields
-        public bool isQuestReward;
-        public RewardData? rewardSpecifics;
-        public List<RewardData>? buyFromQuestReward;
+        private bool isQuestReward;
+        private RewardData? rewardSpecifics;
+        private List<RewardData>? buyFromQuestReward;
 
-        public bool isActive;
-        public bool isSupport;
-        public HashSet<string>? tags;
-        public HashSet<string>? alt_name = null;
+        private bool isActive;
+        private bool isSupport;
+        private HashSet<string>? tags;
+        private HashSet<string>? alt_name = null;
 
         //gem image fields
         //TODO figure out how to store gem image in class
         //public transient Image gemIcon;
         //public transient Image smallGemIcon;
         //public transient Label cacheLabel
-        public Bitmap gemIcon;
-        public Bitmap smallGemIcon;
+        private Bitmap gemIcon;
+        private Bitmap smallGemIcon;
 
-        public bool IsBoughtFromQuestReward()
-        {
-            if (buyFromQuestReward.Count < 0)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-        }
-
+        #endregion
+        
         //constructor
         public Gem(string gemName)
         {
@@ -87,14 +80,9 @@ namespace Progression_Library.Data
             id_replaces = -1;
             tags = new HashSet<string>();
         }
-
-        public void AddAltNamesFromJSON(IEnumerable<Object> jsonArrayIterator)
-        {
-            //TODO figure out what alt_name is used for in path of levelling
-        }
-
+        
         public Gem(Gem dupe)
-        {
+        {            
             classCanBuy = new List<string>();
             level_added = -1;
             replaced = false;
@@ -131,16 +119,171 @@ namespace Progression_Library.Data
             }
         }
 
+
+
+        #region setters
+        public void SetGemID(int newID)
+        {
+            id = newID;
+        }
+
+        private void SetGemName(string newName)
+        {
+            gemName = newName;
+        }
+
+        private void SetAvailableAfterThisQuest(string quest)
+        {
+            availableAfterThisQuest = quest;
+        }
+
+        private void SetSellingVendor(string vendor)
+        {
+            sellingVendor = vendor;
+        }
+
+        public void SetActAvailable(int act)
+        {
+            if(act < 1 || act > 10)
+            {
+                throw new ArgumentOutOfRangeException("There are only acts 1 thru 10, you can't set the act this gem becomes available to one that does not exist!");
+            } else
+            {
+                actFirstAvailable = act;
+            }            
+        }
+
+        public void SetRequiredLevel(int level)
+        {
+            if(level < 1 || level > 38)
+            {
+                throw new ArgumentOutOfRangeException("Valid required gem level range is 1 - 38, you tried to set the required level to: " + level);
+            } else
+            {
+                required_lvl = level;
+            }
+        }
+
+        public void SetLevelAdded(int add)
+        {
+            level_added = add;
+        }
+
+        public void SetIsVaalGem()
+        {
+            isVaalGem = true;
+        }
+
+        public void SetIsNotVaalGem()
+        {
+            isVaalGem = false;
+        }        
+
+        public void SetTownCanBuyIn(string town)
+        {
+            townCanBuyIn = town;
+        }
+
+        public void SetGemColor(string color)
+        {
+            gemColor = color;
+        }
+
+        public void SetIconPath(string icon)
+        {
+            iconPath = icon;
+        }
+
+        public void SetIconDirPath(string icon)
+        {
+            iconDirPath = icon;
+        }
+
+        public void SetReplacedTrue()
+        {
+            replaced = true;
+        }
+
+        public void SetReplacedFalse()
+        {
+            replaced = false;
+        }        
+        
+        public void SetGemReplaces()
+        {
+            replaces = true;
+        }
+
+        public void SetGemDoesntReplaces()
+        {
+            replaces = false;
+        }        
+
+        public void SetGemIsQuestReward()
+        {
+            isQuestReward = true;
+        }
+
+        public void SetGemISNOTQuestReward()
+        {
+            isQuestReward = false;
+        }
+
+        #endregion
+
+        #region getters
+
+        public List<string>? GetClassesCanBuy()
+        {
+            return classCanBuy;
+        }
+
+        public int GetGemID()
+        {
+            return id;
+        }
+
+        public string? GetGemName()
+        {
+            return gemName;
+        }
+
+        public string? GetQuestIsAvailableAfter()
+        {
+            return availableAfterThisQuest;
+        }
+
+        public string? GetSellingVendor()
+        {
+            return sellingVendor;
+        }
+
         public int GetLevelAdded()
         {
             if (level_added != -1)
             {
                 return level_added;
-            } else
+            }
+            else
             {
                 return required_lvl;
             }
         }
+
+        public string? GetGemColor()
+        {
+            return gemColor;
+        }
+
+        public bool GetReplaced()
+        {
+            return replaced;
+        }
+
+        public bool GetIsActive()
+        {
+            return isActive;
+        }       
 
         public Bitmap GetIcon()
         {
@@ -150,12 +293,19 @@ namespace Progression_Library.Data
         public Bitmap GetSmallIcon()
         {
             return smallGemIcon;
+        }        
+
+        public Gem DupeGem()
+        {
+            return new Gem(this);
         }
 
-        public string? GetGemName()
+        public Gem? GetReplacedWith()
         {
-            return gemName;
-        }
+            return replacedWith;
+        }       
+
+        #endregion
 
         public bool IsSameGemNameOrOlder(string gemNameFromImport)
         {
@@ -173,24 +323,9 @@ namespace Progression_Library.Data
             }
         }
 
-        public Gem DupeGem()
-        {
-            return new Gem(this);
-        }
-
-        public List<string>? GetClassesCanBuy()
-        {
-            return classCanBuy;
-        }
-
         public void PutNewClassCanBuy(string newClassCanBuy)
         {
             classCanBuy.Add(newClassCanBuy);
-        }
-
-        public string GetGemColor()
-        {
-            return gemColor;
         }
 
         /*public Label GetLabel() {
@@ -211,5 +346,25 @@ namespace Progression_Library.Data
             smallGemIcon = new Bitmap(gemIcon, new Size(w2,h2));            
         }
 
+        public bool IsBoughtFromQuestReward()
+        {
+            if (buyFromQuestReward.Count < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        #region utility methods
+
+        public void AddAltNamesFromJSON(IEnumerable<Object> jsonArrayIterator)
+        {
+            //TODO figure out what alt_name is used for in path of levelling
+        }
+
+        #endregion
     }
 }
