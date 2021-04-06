@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Progression_Library.FileHandling.XML.Read;
+using System;
+using System.Collections.Generic;
 
 namespace Progression_CL
 {
@@ -46,7 +48,7 @@ namespace Progression_CL
             //test[3] = true;
             //test[6] = true;
             //test[8] = true;
-                        
+
             //GearSlot skills = new GearSlot(test);
 
             //OneSlot test = new OneSlot();
@@ -63,6 +65,36 @@ namespace Progression_CL
             //test.SetSkill(3, "Shi");
             //test.SetSkill(4, "Ro");
             //test.SetSkill(5, "Roku");
+
+            //test reading PoB build XML
+            string location = @"C:\Users\Diesel\Documents\Path of Building\Builds\league\Zippyduvat tectonic slam marauder chieftain.xml";
+            string findHead = "Skill";
+            //string findHead = "Gem";
+            string findAttribute = "slot";
+            //string findAttribute = "nameSpec";
+
+            string one = "Filler One";
+            string two = "Filler Two";
+            string three = "Filler Three";
+
+            List<string> filler = new List<string>();
+
+            filler.Add(one);
+            filler.Add(two);
+            filler.Add(three);
+
+            List<string> test = ReadXML.GetEquipmentSlot(findHead, findAttribute, location);
+
+
+            foreach (string item in filler)
+            {
+                Console.WriteLine("Filler: " + item);
+            }
+
+            foreach (string item in test)
+            {
+                Console.WriteLine("Gear: " + item);
+            }
                
 
             Console.WriteLine("End of test\n");

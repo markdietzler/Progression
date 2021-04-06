@@ -34,7 +34,7 @@ namespace Progression_Library.Data
         {            
             if(a == null)
             {
-                throw new ArgumentNullException("Putting a null act into the ant factory is not allowed.");
+                throw new ArgumentNullException("Putting a null act into the act factory is not allowed.");
             }
             if (a is Act)
             {
@@ -50,8 +50,7 @@ namespace Progression_Library.Data
         }
 
         public void PutZone(Zone zoneToAdd)
-        {
-            //TODO add validation for type Zone
+        {          
             if(zoneToAdd == null)
             {
                 throw new ArgumentNullException("");

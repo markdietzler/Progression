@@ -49,7 +49,7 @@ namespace Progression.Tests
             act = new Act(actID, actName);
             zone = new Zone(zoneName, zoneLevel, imageList, altImage, note, noPassive, hasNoTrial, quest, notQuestReward, actName, actID);
             act.PutZone(zone);
-            int zones = act.getZones().Count;
+            int zones = act.GetZones().Count;
             //assert
             Assert.AreEqual(zones, 1);
         }

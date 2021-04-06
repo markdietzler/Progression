@@ -4,72 +4,156 @@ namespace Progression_Library.Data
 {
     public class SocketGroup
     {
-        List<Gem> listOfGems;
-        Gem active;
+        private List<Gem> listOfGems;
+        private Gem? active;
         //settings
-        int fromGroupLevel;
-        int untilGroupLevel;
+        private int fromGroupLevel;
+        private int untilGroupLevel;
+        private int switche;
 
-        bool replaceGroup;
-        bool replacesGroup;
-        SocketGroup socketGroupReplace;
-        SocketGroup socketGroupThatReplaces;
+        private bool replaceGroup;
+        private bool replacesGroup;
+        private SocketGroup socketGroupReplace;
+        private SocketGroup socketGroupThatReplaces;
         //int indexOfReplaceGroup;
         
-        Dictionary<int, int> linkerToListIndex;
-        public int id;
+        private Dictionary<int, int> linkerToListIndex;
+        private int socket_group_id;
+
         // IDS FOR JSON CONVERTION
-        public int id_replace;
-        public int id_replaces;
-        public int active_id;
+        private int id_replacement;
+        private int id_to_replace;
+        private int active_id;
 
-        private string note;
+        private string socketGroupNote;
 
-        public void AddNote(string note)
+        #region setters
+               
+
+        public void SetGemList(List<Gem> newList)
         {
-            this.note = note;
+            listOfGems = newList;
         }
 
-        public string GetNote()
+        public void SetActiveGem(Gem newGem)
         {
-            return note;
+            active = newGem;
         }
 
-        public static int Sign(HashSet<int> randomIDs)
+        public void SetFromGroupLevel(int floor)
         {
-            int ran;
-            do
-            {
-                //generate random trhread safe int between 1 and 99999
-                //java code: ran = ThreadLocalRandom.current().nextInt(1,999999);
-                ran = 8;
-            } while (randomIDs.Contains(ran));
-            randomIDs.Add(ran);
-            return ran;
+            fromGroupLevel = floor;
         }
 
-        public SocketGroup Dupe(HashSet<int> s_id, HashSet<int> g_id)
+        public void SetUntilGroupLevel( int ceiling)
         {
-            SocketGroup duped = new SocketGroup();
-            Gem old_active = this.active;
-            duped.id = Sign(s_id);
-            duped.fromGroupLevel = this.fromGroupLevel;
-            duped.untilGroupLevel = this.untilGroupLevel;
-            duped.AddNote(this.note);
-            foreach (Gem g in listOfGems)
-            {
-                Gem duped_gem = g.DupeGem();
-                g.SetLevelAdded(duped_gem.GetLevelAdded());
-                duped_gem.SetGemID(Sign(g_id));
-                duped.GetGems().Add(duped_gem);
-                if (g.Equals(old_active))
-                {
-                    duped.active = duped_gem;
-                    duped.active_id = duped_gem.GetGemID();
-                }
-            }
-            return duped;
+            untilGroupLevel = ceiling;
         }
+
+        public void SetGroupLevelCeiling(int ceiling)
+        {
+            untilGroupLevel = ceiling;
+        }
+
+        public void SetSocketGroupID(int newGroupID)
+        {
+            socket_group_id = newGroupID;
+        }
+
+        public void SetReplacementID(int newReplacementID)
+        {
+            id_replacement = newReplacementID;
+        }
+
+        public void SetReplacedID(int newReplacedID)
+        {
+            id_replacement = newReplacedID;
+        }
+        public void SetActiveID(int newActiveID)
+        {
+            id_replacement = newActiveID;
+        }
+
+        public void SetNote(string newNote)
+        {
+            this.socketGroupNote = newNote;
+        }
+
+        #endregion
+
+        #region getters
+
+        public List<Gem> GetGems()
+        {
+            return listOfGems;
+        }
+
+        public Gem GetActiveGem()
+        {
+            return active;
+        }
+
+        public int GetFromGroupLevel()
+        {
+            return fromGroupLevel;
+        }
+
+        public int GetUntilGroupLevel()
+        {
+            return untilGroupLevel;
+        }
+
+        public int GetSwitche()
+        {
+            return switche;
+        }
+        
+        public bool IsReplaceGroup()
+        {
+            return replaceGroup;
+        }
+
+        public bool IsReplaceesGroup()
+        {
+            return replacesGroup;
+        }
+
+        public SocketGroup GetSocketGroupReplace()
+        {
+            return socketGroupReplace;
+        }
+
+        public SocketGroup GetSocketGroupThatReplaces()
+        {
+            return socketGroupThatReplaces;
+        }
+
+        public int GetSocketGroupID()
+        {
+            return socket_group_id;
+        }
+
+        public int GetIDToReplace()
+        {
+            return id_replacement;
+        }
+
+        public int GetIDOfReplaced()
+        {
+            return id_to_replace;
+        }
+
+        public int GetActiveID()
+        {
+            return active_id;
+        }
+
+        public string GetSocketGroupNote()
+        {
+            return socketGroupNote;
+        }
+
+        #endregion
 
         public SocketGroup()
         {
@@ -85,13 +169,49 @@ namespace Progression_Library.Data
             socketGroupThatReplaces = null;
             //indexOfReplaceGroup = -1;
             linkerToListIndex = new Dictionary<int, int>();
-            id = -1;
-            id_replace = -1;
-            id_replaces = -1;
+            socket_group_id = -1;
+            id_replacement = -1;
+            id_to_replace = -1;
             active_id = -1;
         }
 
-        int switche;
+        #region class methods
+
+        public static int Sign(HashSet<int> randomIDs)
+        {
+            int ran;
+            do
+            {
+                //generate random trhread safe int between 1 and 99999
+                //java code: ran = ThreadLocalRandom.current().nextInt(1,999999);
+                ran = 8;
+            } while (randomIDs.Contains(ran));
+            randomIDs.Add(ran);
+            return ran;
+        }
+
+        public SocketGroup Dupe(HashSet<int> socket_group_id, HashSet<int> gem_id)
+        {
+            SocketGroup duped = new SocketGroup();
+            Gem old_active = this.active;
+            duped.socket_group_id = Sign(socket_group_id);
+            duped.SetFromGroupLevel(this.GetFromGroupLevel());
+            duped.SetUntilGroupLevel(this.GetUntilGroupLevel());
+            duped.SetNote(this.socketGroupNote);
+            foreach (Gem g in listOfGems)
+            {
+                Gem duped_gem = g.DupeGem();
+                g.SetLevelAdded(duped_gem.GetLevelAdded());
+                duped_gem.SetGemID(Sign(gem_id));
+                duped.GetGems().Add(duped_gem);
+                if (g.Equals(old_active))
+                {
+                    duped.active = duped_gem;
+                    duped.active_id = duped_gem.GetGemID();
+                }
+            }
+            return duped;
+        }
 
         public Gem PutGem(Gem gem, int id)
         {
@@ -100,7 +220,7 @@ namespace Progression_Library.Data
             Gem g = null;
             if (linkerToListIndex.ContainsKey(id))
             {
-                
+
             }
             else
             {
@@ -109,105 +229,7 @@ namespace Progression_Library.Data
             }
             return g;
         }
-        //gets called on load from json
-        public void LinkGem(Gem gem, int id)
-        {
-            linkerToListIndex.Add(id, listOfGems.IndexOf(gem));
-        }
 
-        public int DoubleCheck()
-        {
-
-            return switche;
-        }
-
-        public void RemoveGem(Gem gem, int id)
-        {
-
-        }
-
-        public Gem GetActiveGem()
-        {
-            return active;
-        }
-
-        public void SetActiveGem(Gem g)
-        {
-            active = g;
-        }
-
-        public List<Gem> GetGems()
-        {
-            return listOfGems;
-        }
-
-        public int GetFromGroupLevel()
-        {
-            return fromGroupLevel;
-        }
-
-        public void SetFromGroupLevel(int a)
-        {
-            fromGroupLevel = a;
-        }
-
-        public int GetUntilGroupLevel()
-        {
-            return untilGroupLevel;
-        }
-
-        public void SetUntilGroupLevel(int a)
-        {
-            untilGroupLevel = a;
-        }
-
-        public bool ReplaceGroup()
-        {
-            return replaceGroup;
-        }
-
-        public void SetReplaceGroup(bool a)
-        {
-            replaceGroup = a;
-            if (a == false)
-            {
-                socketGroupReplace = null;
-            }
-        }
-
-        public SocketGroup GetGroupReplaced()
-        {
-            return socketGroupReplace;
-        }
-
-        public void SetGroupReplaced(SocketGroup a)
-        {
-            socketGroupReplace = a;
-        }
-
-        public bool ReplacesGroup()
-        {
-            return replacesGroup;
-        }
-
-        public void SetReplacesGroup(bool a)
-        {
-            replacesGroup = a;
-            if (a == false)
-            {
-                socketGroupThatReplaces = null;
-            }
-        }
-
-        public SocketGroup GetGroupThatReplaces()
-        {
-            return socketGroupThatReplaces;
-        }
-
-        public void SsetGroupThatReplaces(SocketGroup a)
-        {
-            socketGroupThatReplaces = a;
-        }
-
+        #endregion
     }
 }

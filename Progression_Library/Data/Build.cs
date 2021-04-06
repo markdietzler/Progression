@@ -8,7 +8,7 @@ namespace Progression_Library.Data
         private string buildName;
         private List<SocketGroup> gems;
         private bool hasPob;
-        private string pobLink;
+        private string? pobLink;
         private bool isValid;
         private readonly CharacterInfo M_CharacterInfo = new CharacterInfo();
 
@@ -88,14 +88,14 @@ namespace Progression_Library.Data
                 {
                     //System.out.println("SocketGroup # "+sg.getActiveGem().getGemName());
                     //System.out.println("- Use at level: "+sg.fromGroupLevel);
-                    if (sg.ReplaceGroup())
+                    if (sg.IsReplaceGroup())
                     {
-                        if (sg.GetGroupReplaced().GetActiveGem() == null)
+                        if (sg.GetSocketGroupReplace().GetActiveGem() == null)
                         {
                             //System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+" replaces with a socket group that doesn't have a valid main gem.");
                             return false;
                         }
-                        if (sg.GetGroupReplaced().GetFromGroupLevel() != sg.GetUntilGroupLevel())
+                        if (sg.GetSocketGroupReplace().GetFromGroupLevel() != sg.GetUntilGroupLevel())
                         {
                             //System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+"- replaces with -"
                             // +sg.getGroupReplaced().getActiveGem().getGemName()+"- and group levels don't match.");
@@ -169,26 +169,26 @@ namespace Progression_Library.Data
                     error += "SocketGroup # " + sg.GetActiveGem().GetGemName() + "\n";
                     // System.out.println("- Use at level: "+sg.fromGroupLevel);
                     error += "- Use at level: " + sg.GetFromGroupLevel() + "\n";
-                    if (sg.ReplaceGroup())
+                    if (sg.IsReplaceGroup())
                     {
-                        if (sg.GetGroupReplaced().GetActiveGem() == null)
+                        if (sg.GetSocketGroupReplace().GetActiveGem() == null)
                         {
                             //  System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+" replaces with a socket group that doesn't have a valid main gem.");
                             error += ">>>>Socket group -" + sg.GetActiveGem().GetGemName() + " replaces with a socket group that doesn't have a valid main gem.\n";
                             return error;
                         }
-                        if (sg.GetGroupReplaced().GetFromGroupLevel() != sg.GetUntilGroupLevel())
+                        if (sg.GetSocketGroupReplace().GetFromGroupLevel() != sg.GetUntilGroupLevel())
                         {
                             // System.out.println(">>>>Socket group -"+sg.getActiveGem().getGemName()+"- replaces with -"
                             //      +sg.getGroupReplaced().getActiveGem().getGemName()+"- and group levels don't match.");
                             error += ">>>>Socket group -" + sg.GetActiveGem().GetGemName() + "- replaces with -"
-                                    + sg.GetGroupReplaced().GetActiveGem().GetGemName() + "- and group levels don't match.\n";
+                                    + sg.GetSocketGroupReplace().GetActiveGem().GetGemName() + "- and group levels don't match.\n";
                             return error;
                         }
                         // System.out.println("- Replace at level: "+sg.untilGroupLevel);
                         error += "- Replace at level: " + sg.GetUntilGroupLevel() + "\n";
                         // System.out.println("- Replace with : -"+sg.getGroupReplaced().getActiveGem().getGemName()+"- .");
-                        error += "- Replace with : -" + sg.GetGroupReplaced().GetActiveGem().GetGemName() + "- .\n";
+                        error += "- Replace with : -" + sg.GetSocketGroupReplace().GetActiveGem().GetGemName() + "- .\n";
                     }
 
                     //inner loop
@@ -233,7 +233,7 @@ namespace Progression_Library.Data
             return error;
         }
 
-        public void patch_missing_sgroups()
+        public void Patch_Missing_Socket_Groups()
         {
             List<SocketGroup> deleted = new List<SocketGroup>();
             foreach (SocketGroup sg in GetSocketGroup())

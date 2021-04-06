@@ -38,9 +38,24 @@ namespace Progression_Library.FileHandling.XML.Read
         // 1    2     3      4     5  6  7     8     9   10
         //helm chest gloves boots mh oh ring1 ring2 2h?
 
-        public static List<string> GetEquipmentSlot(string equipmentToGet, string placeToLook, string fileToRead)
+        public static List<string> GetEquipmentSlot(string attribut_type, string attributeName, string placeToLook)
         {
             List<string> returnMe = new List<string>();
+
+            using (XmlReader _Reader = XmlReader.Create(new FileStream(placeToLook, FileMode.Open), new XmlReaderSettings() { CloseInput = true } ))
+            {
+                while(_Reader.Read())
+                {
+                    if((_Reader.NodeType == XmlNodeType.Element) && (_Reader.Name == attribut_type))
+                    {
+                        if(_Reader.HasAttributes)
+                        {
+                            returnMe.Add(_Reader.GetAttribute(attributeName));
+                        }
+
+                    }
+                }
+            }
 
 
             return returnMe;

@@ -15,16 +15,9 @@ namespace Progression_Library.Data
             this.zonesInAct = new List<Zone>();
             this.actName = act;
         }
+               
 
-        public List<Zone> getZones()
-        {
-            return zonesInAct;
-        }
-
-        public void PutZone(Zone zoneToPut)
-        {
-            zonesInAct.Add(zoneToPut);
-        }
+        #region getters
 
         public int GetActID()
         {
@@ -35,5 +28,48 @@ namespace Progression_Library.Data
         {
             return actName;
         }
+
+        public List<Zone> GetZones()
+        {
+            return zonesInAct;
+        }
+
+        #endregion
+
+        #region Setters
+
+        public void PutActName(string newName)
+        {
+            actName = newName;
+        }
+
+        #endregion
+
+        #region class methods
+
+        public void PutZone(Zone zoneToPut)
+        {
+            zonesInAct.Add(zoneToPut);
+        }
+
+        public Zone GetZoneID(int zoneIndex)
+        {
+            return zonesInAct[zoneIndex];
+        }
+
+        public void PutActID(int newID)
+        {
+            if (newID < 1 || newID > 10)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            {
+                actID = newID;
+            }
+        }
+
+        #endregion
+
     }
 }
