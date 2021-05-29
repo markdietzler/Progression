@@ -67,7 +67,7 @@ namespace Progression_CL
             //test.SetSkill(5, "Roku");
 
             //test reading PoB build XML
-            string location = @"C:\Users\Diesel\Documents\Path of Building\Builds\league\Zippyduvat tectonic slam marauder chieftain.xml";
+            string location = @"C:\Users\Diesel\Documents\Path of Building\Builds\league\Cirtianea BB-BF templar inquisitor.xml";
             string findHead = "Skill";
             //string findHead = "Gem";
             string findAttribute = "slot";

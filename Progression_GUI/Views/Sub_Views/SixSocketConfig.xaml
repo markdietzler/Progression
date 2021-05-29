@@ -85,7 +85,7 @@
                 </Viewbox>
 
                 <!-- link symbol -->
-                <TextBlock Grid.Column="1" Grid.Row="4" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Grid.Row="4" Text="|" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                 <!-- Middle LH corner gem -->
                 <Viewbox Grid.Column="1" Grid.Row="5" Width="78" Height="78">
@@ -93,6 +93,8 @@
                         <Image Source="/Assets/Skills/Added_Fire_Damage_Support_inventory_icon.png" />
                     </Border>
                 </Viewbox>
+
+                <TextBlock Grid.Column="2" Grid.Row="5" Text="-" Margin="5" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                 <!-- Lower RH corner gem -->
                 <Viewbox Grid.Column="3" Grid.Row="5" Width="78" Height="78">

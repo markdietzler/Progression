@@ -1,4 +1,3 @@
-C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.csprojAssemblyReference.cache
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.AssemblyInfoInputs.cache
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.AssemblyInfo.cs
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.csproj.CoreCompileInputs.cache
@@ -105,3 +104,4 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\D
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.dll
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.pdb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.genruntimeconfig.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.csproj.AssemblyReference.cache
