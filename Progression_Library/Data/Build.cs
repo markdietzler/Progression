@@ -69,6 +69,11 @@ namespace Progression_Library.Data
             return M_CharacterInfo.GetAscendency();
         }
 
+        public void SetSocketGroups(List<SocketGroup> newList)
+        {
+            gems = newList;
+        }
+
         public List<SocketGroup> GetSocketGroup()
         {
             return gems;
@@ -145,7 +150,7 @@ namespace Progression_Library.Data
             return true;
         }
 
-        public string validate_failed_string()
+        public string Validate_failed_string()
         {
             string error = ">>>>Validating build :" + this.buildName + "... <<<<\n";
             //System.out.println(error);
