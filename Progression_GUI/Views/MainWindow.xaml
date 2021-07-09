@@ -52,62 +52,62 @@
 
         <!-- main hand RH side (2 hand/One Hand) -->
         <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="BurlyWood" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- helmet Left Side -->
         <StackPanel Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Beige" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- helmet Right Side -->
         <StackPanel Grid.Row="1" Grid.Column="5" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="BlanchedAlmond" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- off hand hand -->
         <StackPanel Grid.Row="1" Grid.Column="8" Grid.RowSpan="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Blue" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- ring 1 -->
         <StackPanel Grid.Row="4" Grid.Column="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Coral" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- Chest left side -->
         <StackPanel Grid.Row="4" Grid.Column="4" Grid.RowSpan="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="DarkCyan" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- chest right side -->
         <StackPanel Grid.Row="4" Grid.Column="5" Grid.RowSpan="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="DarkGreen" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- ring 2 -->
         <StackPanel Grid.Row="4" Grid.Column="6" Grid.RowSpan="3">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="DarkMagenta" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- gloves Left Side -->
         <StackPanel Grid.Row="6" Grid.Column="1" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Firebrick" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- gloves Right Side -->
         <StackPanel Grid.Row="6" Grid.Column="2" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Gold" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- boots Left Side -->
         <StackPanel Grid.Row="6" Grid.Column="7" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="HotPink" Width="20" Height="60"/>
         </StackPanel>
 
         <!-- boots Right Side -->
         <StackPanel Grid.Row="6" Grid.Column="8" Grid.RowSpan="2">
-            <WrapPanel Orientation="Vertical" Margin="2" Background="Aqua" Width="20" Height="60"/>
+            <WrapPanel Orientation="Vertical" Margin="2" Background="Lavender" Width="20" Height="60"/>
         </StackPanel>
 
 

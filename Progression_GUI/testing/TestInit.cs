@@ -25,12 +25,14 @@ namespace Progression_GUI.testing
 
         public List<SocketGroup> SetGroupList()
         {
-            List<SocketGroup> gemGroups = new List<SocketGroup>();
-            gemGroups.Add(bow);
-            gemGroups.Add(chest);
-            gemGroups.Add(helmet);
-            gemGroups.Add(gloves);
-            gemGroups.Add(boots);
+            List<SocketGroup> gemGroups = new List<SocketGroup>
+            {
+                bow,
+                chest,
+                helmet,
+                gloves,
+                boots
+            };
             return gemGroups;
         }
 
@@ -52,12 +54,12 @@ namespace Progression_GUI.testing
 
         private void LoadBow()
         {
-            bow.PutGem(new Gem("XXX"), 1);
-            bow.PutGem(new Gem("XXX"), 2);
-            bow.PutGem(new Gem("XXX"), 3);
-            bow.PutGem(new Gem("XXX"), 4);
-            bow.PutGem(new Gem("XXX"), 5);
-            bow.PutGem(new Gem("XXX"), 6);
+            bow.PutGem(new Gem("RainOfSpores"), 1);
+            bow.PutGem(new Gem("SupportGemMirageArcher"), 2);
+            bow.PutGem(new Gem("SupportPhysicalProjectileAttackDamage"), 3);
+            bow.PutGem(new Gem("SupportVoidManipulation"), 4);
+            bow.PutGem(new Gem("SupportRapidDecay"), 5);
+            bow.PutGem(new Gem("SupportFasterAttack"), 6);
         }
 
         private void LoadHelmet()
