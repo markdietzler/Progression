@@ -1,0 +1,2 @@
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.csproj.AssemblyReference.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.csproj.CoreCompileInputs.cache
