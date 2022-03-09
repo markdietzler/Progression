@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Progression_Library\Progression_Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\ViewAssets\" />
+  </ItemGroup>
+
 </Project>

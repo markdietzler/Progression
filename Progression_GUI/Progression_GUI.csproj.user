@@ -13,6 +13,9 @@
     <Compile Update="Views\RunWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SplashWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Sub_Views\AddGem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RunWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SplashWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Sub_Views\AddGem.xaml">
