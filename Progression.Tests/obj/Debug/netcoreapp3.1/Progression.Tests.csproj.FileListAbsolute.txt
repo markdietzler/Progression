@@ -105,3 +105,4 @@ C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\D
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.pdb
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.genruntimeconfig.cache
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.csproj.AssemblyReference.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\Progression.Tests\obj\Debug\netcoreapp3.1\Progression.Tests.GeneratedMSBuildEditorConfig.editorconfig

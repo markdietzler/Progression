@@ -42,39 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Expiration.cs" />
-    <Compile Include="impl\PastebinImpl.cs" />
-    <Compile Include="impl\user\impl_internal_user\Users.cs" />
-    <Compile Include="impl\user\UserBuilderImpl.cs" />
-    <Compile Include="impl\user\UserImpl.cs" />
-    <Compile Include="impl\xml\ParseXmlHandler.cs" />
-    <Compile Include="impl\xml\UserXmlHandler.cs" />
-    <Compile Include="internal_utils\utils\HttpEndpointConnection.cs" />
-    <Compile Include="internal_utils\utils\HttpParametersUtils.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Paste.cs" />
-    <Compile Include="Pastebin.cs" />
-    <Compile Include="PasteBin1.cs" />
+    <Compile Include="PasteBin.cs" />
     <Compile Include="PastebinException.cs" />
-    <Compile Include="paste\internal_paste\Pastes.cs" />
-    <Compile Include="paste\Paste.cs" />
-    <Compile Include="paste\PasteBuilder.cs" />
-    <Compile Include="paste\PasteExpire.cs" />
-    <Compile Include="paste\PasteVisibility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="response\FailedResponse.cs" />
-    <Compile Include="response\Responces.cs" />
-    <Compile Include="response\Response.cs" />
-    <Compile Include="response\SuccessResponse.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="user\AccountType.cs" />
-    <Compile Include="user\internal_user\UserBuilder.cs" />
-    <Compile Include="user\User.cs" />
     <Compile Include="Utills.cs" />
     <Compile Include="Visibility.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="impl\factory\" />
-    <Folder Include="impl\paste\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

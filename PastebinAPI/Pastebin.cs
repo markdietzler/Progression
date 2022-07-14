@@ -1,100 +1,49 @@
-﻿using PastebinAPI.paste;
-using PastebinAPI.response;
-using PastebinAPI.user;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PastebinAPI
 {
-    public interface Pastebin
+    using static Utills;
+    public static class PasteBin
     {
-        /**
-         * Should post the Paste passed as parameter in Pastebin.
-         * @param paste The paste to share
-         * @return The result of the request to post the paste. If everything is OK, it should return the paste url (or key)
-         */
+        /// <summary>
+        /// You must set this to your API dev key given by Pastebin before you use anything in the API
+        /// </summary>
+        public static string DevKey { get; set; }
 
-        Response<string> post(Paste paste);
+        /// <summary>
+        /// Log-in to Pastebin
+        /// </summary>
+        /// <returns>new User object</returns>
+        public static async Task<User> LoginAsync(string username, string password)
+        {
+            var result = await PostRequestAsync(URL_LOGIN,
+                                            "api_dev_key=" + DevKey,
+                                            "api_user_name=" + username,
+                                            "api_user_password=" + password);
 
-        /**
-         * Should post the Paste passed as parameter in Pastebin using the userKey passed
-         * as parameter if not null.
-         *
-         * The user key should be used to assign the Paste to the user.
-         *
-         * @param paste The paste to share
-         * @param userKey The userKey to use if not null.
-         * @return The result of the request to post the paste. If everything is OK, it should return the paste url (or key)
-         */
+            if (result.Contains(ERROR))
+                throw new PastebinException(result);
 
-        Response<string> post(Paste paste, string userKey);
+            var user = new User(result);
+            await user.RequestPreferencesAsync();
+            return user;
+        }
 
-        /**
-         * @return Should read and return pastebin trending pastes
-         */
+        /// <summary>
+        /// Lists the currently trending pastes
+        /// </summary>
+        /// <returns>Enumerable of the trending pastes</returns>
+        public static async Task<IEnumerable<Paste>> ListTrendingPastesAsync()
+        {
+            var result = await PostRequestAsync(URL_API,
+                                            "api_dev_key=" + DevKey,
+                                            "api_option=" + "trends");
 
-        Response<List<Paste>> GetTrendingPastes();
+            if (result.Contains(ERROR))
+                throw new PastebinException(result);
 
-        /**
-         * @param pasteKey The paste key
-         * @return Should read the paste raw code and return it
-         */
-
-        Response<string> GetRawPaste(string pasteKey);
-
-        /**
-         * Should try to login the user using the credentials passed as argument.
-         *
-         * @param userName The username
-         * @param password The password
-         * @return The request to login the user. If everything is OK, it should contains the user_key
-         */
-
-        Response<string> Login(string userName, string password);
-
-        /**
-         * Should read the information of the user represented by the userKey passed as argument
-         *
-         * @param userKey User key
-         * @return The request to get user information. If everything is OK, it should return an User
-         * object contains the user informations.
-         */
-
-        Response<User> GetUser(string userKey);
-
-        /**
-         * Should read all the pastes of the user represented by the userKey passed as
-         * argument.
-         *
-         * @param userKey The user key
-         * @return The request to read user pastes. If everything is OK, it should return a List
-         * contains all the user pastes. If the user doesn't have any paste, it should return
-         * an empty list.
-         */
-
-        Response<List<Paste>> GetPastesOf(string userKey);
-
-        /**
-         * Should read all the pastes of the user represented by the userKey passed as
-         * argument.
-         *
-         * @param userKey The user key
-         * @param limit How many items it should return
-         * @return The request to read user pastes. If everything is OK, it should return a List
-         * contains all the user pastes. If the user doesn't have any paste, it should return
-         * an empty list.
-         */
-
-        Response<List<Paste>> GetPastesOf(string userKey, int limit);
-
-        /**
-         * Should ask to Pastebin to delete the paste assigned to the pasteKey passed as argument.
-         *
-         * The userKey should be used to check if the user can delete the paste.
-         *
-         * @param pasteKey Paste key.
-         * @param userKey User key.
-         * @return The request to delete the paste. If everything is OK it will contains true.
-         */
-        Response<bool> DeletePaste(string pasteKey, string userKey);
+            return PastesFromXML(result);
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace PastebinAPI
 
             var result = await PostRequestAsync(URL_API,
                                             //required parameters
-                                            "api_dev_key=" + PasteBin1.DevKey,
+                                            "api_dev_key=" + PasteBin.DevKey,
                                             "api_option=" + "paste",
                                             "api_paste_code=" + Uri.EscapeDataString(text),
                                             //optional parameters

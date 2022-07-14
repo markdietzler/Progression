@@ -47,7 +47,7 @@ namespace PastebinAPI
         public async Task<IEnumerable<Paste>> ListPastesAsync(int resultsLimit = 50)
         {
             var result = await PostRequestAsync(URL_API,
-                                            "api_dev_key=" + PasteBin1.DevKey,
+                                            "api_dev_key=" + PasteBin.DevKey,
                                             "api_user_key=" + userKey,
                                             "api_results_limit=" + resultsLimit,
                                             "api_option=" + "list");
@@ -64,7 +64,7 @@ namespace PastebinAPI
         public async Task DeletePasteAsync(Paste paste)
         {
             var result = await PostRequestAsync(URL_API,
-                                            "api_dev_key=" + PasteBin1.DevKey,
+                                            "api_dev_key=" + PasteBin.DevKey,
                                             "api_user_key=" + userKey,
                                             "api_paste_key=" + paste.Key,
                                             "api_option=" + "delete");
@@ -79,7 +79,7 @@ namespace PastebinAPI
         public async Task RequestPreferencesAsync()
         {
             var result = await PostRequestAsync(URL_API,
-                                            "api_dev_key=" + PasteBin1.DevKey,
+                                            "api_dev_key=" + PasteBin.DevKey,
                                             "api_user_key=" + userKey,
                                             "api_option=" + "userdetails");
 

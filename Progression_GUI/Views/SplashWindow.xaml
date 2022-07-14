@@ -14,7 +14,7 @@
     <Window.Background>
         <ImageBrush>
             <ImageBrush.ImageSource>
-                <BitmapImage UriSource=""/>
+                <BitmapImage UriSource="/Assets/ViewAssets/Divination_card_frame.png"/>
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>

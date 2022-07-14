@@ -1,2 +1,5 @@
-C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.csproj.AssemblyReference.cache
 C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.csproj.CoreCompileInputs.cache
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\bin\Debug\PastebinAPI.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\bin\Debug\PastebinAPI.pdb
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.dll
+C:\Users\Diesel\Documents\c sharp workspaces\Progression\PastebinAPI\obj\Debug\PastebinAPI.pdb
